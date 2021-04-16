@@ -7,7 +7,25 @@ export const REQUEST_HOME = 'request_home';
 export const RECEIVE_HOME = 'receive_home';
 
 export interface HomePayload {
-  content: any;
+  content: Home;
+}
+
+export interface Home {
+  showCasing: ShowCasing[];
+  featuredArt: FeaturedArt;
+}
+
+export interface ShowCasing {
+  id: string;
+  name: string;
+  price: number;
+  Art: string[]
+}
+
+export interface FeaturedArt {
+  id: string,
+  name: string;
+  Art: string[]
 }
 
 export interface RequestHomeAction {
