@@ -18,7 +18,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
     case "HeadLine":
       Data = item.Art.map((item: any) => {
         return (
-          <div className="gallary-layer-HeadLine">
+          <div className="gallary-layer-HeadLine grabbable">
             <img
               className="gallary-item-HeadLine disableselect disabledrag"
               src={item}

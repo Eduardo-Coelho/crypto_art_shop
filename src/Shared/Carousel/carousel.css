@@ -19,7 +19,7 @@
 
 /* HeadLine */
 .gallary-layer-HeadLine {
-  min-height: 50vh;
+  min-height: 60vh;
   position: relative;
 }
 
@@ -28,5 +28,6 @@
   position: absolute;
   top: -82vh;
   left: 0;
+  z-index: -1;
 }
 /* HeadLine END */
