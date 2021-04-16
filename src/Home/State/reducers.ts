@@ -1,17 +1,10 @@
 import { HomeState } from './store';
 import { ReceiveHomeAction, RECEIVE_HOME, REQUEST_HOME } from './actions';
 
-const DEFAULT_STATE: HomeState | any = {
-  loading: false,
-  content: {
-    featuredArt: {
-    id: '',
-    name: '',
-    price: 0,
-    Art: [],
-  },
-  ShowCasing: [],
- }
+const DEFAULT_STATE: HomeState = {
+  loading: true,
+  featuredArt: null,
+  showcasing: null,
 };
 
 const Home = (state = DEFAULT_STATE, action: ReceiveHomeAction,):any => {

@@ -1,0 +1,32 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+.alice-carousel__dots-item:not(.__custom):hover,
+.alice-carousel__dots-item:not(.__custom).__active {
+  background-color: #505050;
+}
+
+.alice-carousel__dots-item:not(.__custom) {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+
+.alice-carousel__dots {
+  position: absolute;
+  top: 87%;
+  left: 47%;
+}
+
+/* HeadLine */
+.gallary-layer-HeadLine {
+  min-height: 50vh;
+  position: relative;
+}
+
+.gallary-item-HeadLine {
+  width: 100%;
+  position: absolute;
+  top: -82vh;
+  left: 0;
+}
+/* HeadLine END */
