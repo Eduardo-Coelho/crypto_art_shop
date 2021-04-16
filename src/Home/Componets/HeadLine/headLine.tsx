@@ -5,10 +5,13 @@ import { State } from "../../../Reducers";
 const HeadLine: React.FC = () => {
   const homeState = useSelector((state: State) => state.Home);
   return (
-    <div>
-      <h1> {homeState.name} </h1>
-      <h2>{homeState.email}</h2>
-    </div>
+    <>
+      {homeState.loading ? (
+        <h1> HeadLine Loading... </h1>
+      ) : (
+        <h1> Data Loaded.. </h1>
+      )}
+    </>
   );
 };
 

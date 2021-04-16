@@ -20,8 +20,6 @@ export interface Product {
   Art: string[];
 }
 
-
-
 export interface RequestProductAction {
   type: string;
 }
@@ -42,7 +40,7 @@ export const receiveProduct = (payload: ProductPayload): ReceiveProductAction =>
 
 export const fetchProduct = (dispatch:any): void => {
   dispatch(requestProduct());
-    axios.get(ENDPOINT_URL.Home).then((res:any)=>{
+    axios.get(ENDPOINT_URL.Product).then((res:any)=>{
     const {data} = res;
       return dispatch(receiveProduct(data))
     }).catch((error:any)=>{
