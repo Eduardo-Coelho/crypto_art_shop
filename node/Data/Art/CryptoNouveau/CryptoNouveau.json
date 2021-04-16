@@ -1,0 +1,13 @@
+{
+    "id": "CryptoNouveau",
+    "name": "Crypto Nouveau BxZ",
+    "price": 49.95,
+    "availableLeft": 4,
+    "availableMax": 4,
+    "Art": [
+        "https://cryptoart.com/wp-content/uploads/2015/03/SXSW-cert.jpg",
+        "https://cryptoart.com/wp-content/uploads/2015/03/Bitcoin-Art-CryptoNoveau-small-qr.jpg",
+        "https://cryptoart.com/wp-content/uploads/2015/03/Bitcoin-Art-CryptoNoveau-small-book.jpg",
+        "https://cryptoart.com/wp-content/uploads/2015/03/Bitcoin-Art-CryptoNoveau-Framed-MediumLarge.jpg"
+    ]
+}

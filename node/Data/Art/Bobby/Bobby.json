@@ -1,0 +1,13 @@
+{
+    "id": "Bobby",
+    "name": "Bobby",
+    "price": 89.95,
+    "availableLeft": 1,
+    "availableMax": 2,
+    "Art": [
+        "https://cryptoart.com/wp-content/uploads/2014/04/Bobby2.jpg",
+        "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-small-qr.jpg",
+        "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-Detail.jpg",
+        "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-small-book.jpg"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "id": "BlackSwan",
+    "name": "Bitcoin Cash – Core’s Black Swan",
+    "price": 99.95,
+    "availableLeft": 2,
+    "availableMax": 4,
+    "Art": [
+        "https://cryptoart.com/wp-content/uploads/2019/11/Bitcoin-Cash-Black-Swan.jpg",
+        "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCashBlackSwan-small-qr.jpg",
+        "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCash-book.jpg",
+        "https://cryptoart.com/wp-content/uploads/2019/11/Bitcoin-Cash-framed-mediumLarge.jpg"
+    ]
+}
