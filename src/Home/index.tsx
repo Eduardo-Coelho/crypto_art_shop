@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useStore } from "react-redux";
-import Header from "./Componets/Header/Header";
+import FeaturedContent from "./Componets/FeaturedContent/featuredContent";
+import HeadLine from "./Componets/HeadLine/headLine";
 import { fetchHome } from "./State/actions";
 
 const Home: React.FC = () => {
@@ -11,7 +12,8 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <Header />
+      <HeadLine />
+      <FeaturedContent />
     </div>
   );
 };
