@@ -17,7 +17,7 @@ export interface Product {
   price: number;
   availableLeft: number;
   availableMax: number;
-  Art: string[];
+  cdn: string[];
 }
 
 export interface RequestProductAction {

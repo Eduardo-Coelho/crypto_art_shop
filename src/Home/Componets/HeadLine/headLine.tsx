@@ -12,7 +12,7 @@ const HeadLine: React.FC = () => {
         <h1> HeadLine Loading... </h1>
       ) : (
         <div>
-          <Carousel item={homeState.showcasing} type={"HeadLine"} />
+          <Carousel item={homeState.showCasing} type={"HeadLine"} />
         </div>
       )}
     </>

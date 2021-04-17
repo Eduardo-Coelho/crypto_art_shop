@@ -9,7 +9,7 @@ const DEFAULT_STATE: ProductState = {
     price: 0,
     availableLeft: 0,
     availableMax: 0,
-    Art: [],
+    cdn: [],
   }
 };
 

@@ -16,6 +16,7 @@ const FeaturedContent: React.FC = () => {
         <div>
           <Container className="featured-container" maxWidth="lg">
             <h1 className="center-text"> Featured Art </h1>
+            <hr />
             <Carousel item={homeState.featuredArt} type={"FeaturedContent"} />
             <Grid container direction="row">
               <Grid item xs={3}>

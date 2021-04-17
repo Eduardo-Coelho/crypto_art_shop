@@ -8,10 +8,14 @@
 }
 
 /* HeadLine */
+
 .gallary-layer-HeadLine {
   padding-top: 10px;
   min-height: 60vh;
   position: relative;
+}
+
+.layer-HeadLine {
 }
 
 .gallary-item-HeadLine {
@@ -27,6 +31,6 @@
 }
 
 .gallary-item-FeaturedContent {
-  width: 250px;
-  height: 350px;
+  width: 99%;
+  height: 400px;
 }

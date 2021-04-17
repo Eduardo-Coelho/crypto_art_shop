@@ -4,7 +4,7 @@ import { ReceiveHomeAction, RECEIVE_HOME, REQUEST_HOME } from './actions';
 const DEFAULT_STATE: HomeState = {
   loading: true,
   featuredArt: null,
-  showcasing: null,
+  showCasing: null,
 };
 
 const Home = (state = DEFAULT_STATE, action: ReceiveHomeAction,):any => {

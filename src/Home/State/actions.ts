@@ -6,26 +6,22 @@ import ENDPOINT_URL from '../../ENDPOINT_URL';
 export const REQUEST_HOME = 'request_home';
 export const RECEIVE_HOME = 'receive_home';
 
-export interface HomePayload {
-  content: Home;
-}
 
-export interface Home {
-  showCasing: ShowCasing[];
-  featuredArt: FeaturedArt;
+export interface HomePayload {
+  showCasing: ShowCasing;
+  featuredArt: Contents[];
 }
 
 export interface ShowCasing {
   id: string;
   name: string;
-  price: number;
-  Art: string[]
+  contents: Contents[];
 }
 
-export interface FeaturedArt {
+export interface Contents {
   id: string,
   name: string;
-  Art: string[]
+  cdn: string;
 }
 
 export interface RequestHomeAction {

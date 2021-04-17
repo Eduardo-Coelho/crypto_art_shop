@@ -1,6 +1,6 @@
 import React from "react";
-import { FeaturedArt } from "../../Home/State/actions";
 import AliceCarousel from "react-alice-carousel";
+import { Contents } from "../../Home/State/actions";
 import "./carousel.css";
 
 interface Props {
@@ -20,12 +20,13 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
 
   switch (type) {
     case TypeEnum.HeadLine:
-      Data = item.Art.map((item: any) => {
+      Data = item.contents.map((i: Contents) => {
         return (
           <div className="gallary-layer-HeadLine grabbable">
+            <div className="layer-HeadLine"></div>
             <img
               className="gallary-item-HeadLine disableselect disabledrag"
-              src={item}
+              src={i.cdn}
               alt=""
             />
           </div>
@@ -36,17 +37,12 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
       };
       break;
     case TypeEnum.FeaturedContent:
-      Data = item.map((i: any) => {
+      Data = item.map((i: Contents) => {
         return (
           <div className="gallary-layer-FeaturedContent">
             <img
               className="gallary-item-FeaturedContent disableselect disabledrag"
-              src={i.Art[0]}
-              alt=""
-            />
-            <img
-              className="gallary-item-FeaturedContent hide"
-              src={i.Art[1]}
+              src={i.cdn}
               alt=""
             />
           </div>
