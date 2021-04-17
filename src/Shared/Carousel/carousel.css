@@ -1,20 +1,7 @@
 @import "react-alice-carousel/lib/alice-carousel.css";
 
-.alice-carousel__dots-item:not(.__custom):hover,
-.alice-carousel__dots-item:not(.__custom).__active {
-  background-color: #505050;
-}
-
-.alice-carousel__dots-item:not(.__custom) {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-}
-
-.alice-carousel__dots {
-  position: absolute;
-  top: 87%;
-  left: 47%;
+.gallary {
+  padding-top: 10px;
 }
 
 /* HeadLine */

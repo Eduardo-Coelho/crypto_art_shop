@@ -35,7 +35,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
       Responsive = {
         1000: { items: 1 },
       };
-      Toggle = false;
+      Toggle = true;
       break;
     case TypeEnum.FeaturedContent:
       break;
