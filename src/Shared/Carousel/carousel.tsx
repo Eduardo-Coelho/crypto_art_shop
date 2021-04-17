@@ -53,7 +53,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
         );
       });
       Responsive = {
-        1000: { items: 3 },
+        1000: { items: 4 },
       };
       break;
 
