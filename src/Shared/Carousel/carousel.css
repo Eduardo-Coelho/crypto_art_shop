@@ -10,12 +10,46 @@
 /* HeadLine */
 
 .gallary-layer-HeadLine {
-  padding-top: 10px;
+  padding-top: 20px;
   min-height: 60vh;
   position: relative;
 }
 
+.HeadLine-name {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  font-family: "Bebas Neue", cursive;
+}
+.sub-text {
+  color: #fff;
+  width: 70%;
+  font-size: 25px;
+}
+
+.view-btn {
+  position: relative;
+  left: 460px;
+  top: -10px;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(248, 228, 137, 0.486);
+  font-size: 29px;
+  width: 250px;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
+}
+
 .layer-HeadLine {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  padding: 230px 609px 0 0;
+  position: absolute;
+  top: 120px;
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  border-radius: 50px;
 }
 
 .gallary-item-HeadLine {
@@ -33,4 +67,35 @@
 .gallary-item-FeaturedContent {
   width: 99%;
   height: 400px;
+}
+
+.goldText {
+  background: linear-gradient(
+    to bottom,
+    #cfc09f 22%,
+    #634f2c 24%,
+    #cfc09f 26%,
+    #cfc09f 27%,
+    #ffecb3 40%,
+    #3a2c0f 78%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.goldText:after {
+  background: none;
+  content: attr(data-heading);
+  left: 0;
+  top: 0;
+  z-index: -1;
+  position: absolute;
+  text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f,
+    5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
 }

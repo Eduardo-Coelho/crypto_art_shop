@@ -23,7 +23,16 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
       Data = item.contents.map((i: Contents) => {
         return (
           <div className="gallary-layer-HeadLine grabbable">
-            <div className="layer-HeadLine"></div>
+            <div className="layer-HeadLine">
+              <div className="HeadLine-name">
+                <h1 className="goldText">{i.name}</h1>
+                <p className="sub-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Doloremque consectetur autem minus eum, maiores corporis culpa
+                </p>
+              </div>
+              <button className="view-btn"> View </button>
+            </div>
             <img
               className="gallary-item-HeadLine disableselect disabledrag"
               src={i.cdn}
