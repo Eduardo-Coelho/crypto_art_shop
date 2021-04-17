@@ -1,11 +1,15 @@
 @import "react-alice-carousel/lib/alice-carousel.css";
 
+.hide {
+  display: none;
+}
+
 .gallary {
-  padding-top: 10px;
 }
 
 /* HeadLine */
 .gallary-layer-HeadLine {
+  padding-top: 10px;
   min-height: 60vh;
   position: relative;
 }
@@ -18,3 +22,11 @@
   z-index: -1;
 }
 /* HeadLine END */
+
+.gallary-layer-FeaturedContent {
+  padding-top: 50px;
+}
+
+.gallary-item-FeaturedContent {
+  width: 250px;
+}

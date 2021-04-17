@@ -4,7 +4,7 @@ import AliceCarousel from "react-alice-carousel";
 import "./carousel.css";
 
 interface Props {
-  item: FeaturedArt;
+  item: any;
   type: string;
 }
 
@@ -17,7 +17,6 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
   console.log("from with in the", item, type);
   let Data;
   let Responsive;
-  let Toggle;
 
   switch (type) {
     case TypeEnum.HeadLine:
@@ -35,9 +34,27 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
       Responsive = {
         1000: { items: 1 },
       };
-      Toggle = true;
       break;
     case TypeEnum.FeaturedContent:
+      Data = item.map((i: any) => {
+        return (
+          <div className="gallary-layer-FeaturedContent">
+            <img
+              className="gallary-item-FeaturedContent disableselect disabledrag"
+              src={i.Art[0]}
+              alt=""
+            />
+            <img
+              className="gallary-item-FeaturedContent hide"
+              src={i.Art[1]}
+              alt=""
+            />
+          </div>
+        );
+      });
+      Responsive = {
+        1000: { items: 3 },
+      };
       break;
 
     default:
@@ -54,7 +71,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
         autoPlay={true}
         mouseTracking
         disableButtonsControls={true}
-        disableDotsControls={Toggle}
+        disableDotsControls={true}
       />
     </div>
   );

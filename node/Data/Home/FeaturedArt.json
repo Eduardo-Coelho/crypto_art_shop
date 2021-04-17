@@ -53,6 +53,96 @@
                 "https://cryptoart.com/wp-content/uploads/2015/11/TheBitcoinHalving.jpg",
                 "https://cryptoart.com/wp-content/uploads/2015/11/Halving-small-qr.jpg"
             ]
+        },
+        {
+            "id": "Bobby",
+            "name": "Bobby",
+            "price": 89.95,
+            "Art": [
+                "https://cryptoart.com/wp-content/uploads/2014/04/Bobby2.jpg",
+                "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-small-qr.jpg"
+            ]
+        },
+        {
+            "id": "CryptoNouveau",
+            "name": "Crypto Nouveau BxZ",
+            "price": 49.95,
+            "Art": [
+                "https://cryptoart.com/wp-content/uploads/2015/03/SXSW-cert.jpg",
+                "https://cryptoart.com/wp-content/uploads/2015/03/Bitcoin-Art-CryptoNoveau-small-qr.jpg"
+            ]
+        },
+        {
+            "id": "Soldier",
+            "name": "Soldier",
+            "price": 99.95,
+            "Art": [
+                "https://cryptoart.com/wp-content/uploads/2013/11/Soldier1.jpg",
+                "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Soldier-small-qr.jpg"
+            ]
+        },
+        {
+            "id": "BlackSwan",
+            "name": "Bitcoin Cash – Core’s Black Swan",
+            "price": 99.95,
+            "Art": [
+                "https://cryptoart.com/wp-content/uploads/2019/11/Bitcoin-Cash-Black-Swan.jpg",
+                "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCashBlackSwan-small-qr.jpg"
+            ]
+        },
+        {
+            "id": "TheHalving",
+            "name": "Bitcoin – The Halving",
+            "price": 549.95,
+            "Art": [
+                "https://cryptoart.com/wp-content/uploads/2015/11/TheBitcoinHalving.jpg",
+                "https://cryptoart.com/wp-content/uploads/2015/11/Halving-small-qr.jpg"
+            ]
+        },
+        {
+            "id": "Bobby",
+            "name": "Bobby",
+            "price": 89.95,
+            "Art": [
+                "https://cryptoart.com/wp-content/uploads/2014/04/Bobby2.jpg",
+                "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-small-qr.jpg"
+            ]
+        },
+        {
+            "id": "CryptoNouveau",
+            "name": "Crypto Nouveau BxZ",
+            "price": 49.95,
+            "Art": [
+                "https://cryptoart.com/wp-content/uploads/2015/03/SXSW-cert.jpg",
+                "https://cryptoart.com/wp-content/uploads/2015/03/Bitcoin-Art-CryptoNoveau-small-qr.jpg"
+            ]
+        },
+        {
+            "id": "Soldier",
+            "name": "Soldier",
+            "price": 99.95,
+            "Art": [
+                "https://cryptoart.com/wp-content/uploads/2013/11/Soldier1.jpg",
+                "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Soldier-small-qr.jpg"
+            ]
+        },
+        {
+            "id": "BlackSwan",
+            "name": "Bitcoin Cash – Core’s Black Swan",
+            "price": 99.95,
+            "Art": [
+                "https://cryptoart.com/wp-content/uploads/2019/11/Bitcoin-Cash-Black-Swan.jpg",
+                "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCashBlackSwan-small-qr.jpg"
+            ]
+        },
+        {
+            "id": "TheHalving",
+            "name": "Bitcoin – The Halving",
+            "price": 549.95,
+            "Art": [
+                "https://cryptoart.com/wp-content/uploads/2015/11/TheBitcoinHalving.jpg",
+                "https://cryptoart.com/wp-content/uploads/2015/11/Halving-small-qr.jpg"
+            ]
         }
     ]
 }
