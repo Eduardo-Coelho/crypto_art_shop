@@ -1,5 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
-
 import React from "react";
 import Home from "./Home/";
 import NotFound from "./NotFound";

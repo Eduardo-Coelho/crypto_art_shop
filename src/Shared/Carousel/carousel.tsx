@@ -8,6 +8,11 @@ interface Props {
   type: string;
 }
 
+enum TypeEnum {
+  HeadLine = "HeadLine",
+  FeaturedContent = "FeaturedContent",
+}
+
 const Carousel: React.FC<Props> = ({ item, type }) => {
   console.log("from with in the", item, type);
   let Data;
@@ -15,7 +20,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
   let Toggle;
 
   switch (type) {
-    case "HeadLine":
+    case TypeEnum.HeadLine:
       Data = item.Art.map((item: any) => {
         return (
           <div className="gallary-layer-HeadLine grabbable">
@@ -32,7 +37,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
       };
       Toggle = false;
       break;
-    case "FeaturedContent":
+    case TypeEnum.FeaturedContent:
       break;
 
     default:

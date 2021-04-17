@@ -1,8 +1,8 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { Store } from 'redux';
-import routes from './Routes';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import { Store } from "redux";
+import routes from "./Routes";
 
 interface AppProps {
   store: Store;
@@ -10,15 +10,11 @@ interface AppProps {
 
 const App: React.FC<AppProps> = ({ store }) => (
   <Provider store={store}>
-      <Switch>
-        {routes.map((route) => (
-          <Route
-            key={route.path}
-            path={route.path}
-            component={route.component}
-          />
-        ))}
-      </Switch>
+    <Switch>
+      {routes.map((route) => (
+        <Route key={route.path} path={route.path} component={route.component} />
+      ))}
+    </Switch>
   </Provider>
 );
 
