@@ -7,17 +7,21 @@ import "./featuredContent.css";
 import { Grid } from "@material-ui/core";
 
 const FeaturedContent: React.FC = () => {
-  const homeState = useSelector((state: State) => state.Home);
+  const { Home } = useSelector((state: State) => state);
   return (
     <>
-      {homeState.loading ? (
+      {Home.loading ? (
         <h1> Featured Loading... </h1>
       ) : (
         <div>
           <Container className="featured-container" maxWidth="lg">
             <h1 className="center-text"> Featured Art </h1>
             <hr />
-            <Carousel item={homeState.featuredArt} type={"FeaturedContent"} />
+            <Carousel
+              key="FeaturedContent"
+              item={Home.featuredArt}
+              type={"FeaturedContent"}
+            />
             <Grid container direction="row">
               <Grid item xs={3}>
                 <div className="text-item">

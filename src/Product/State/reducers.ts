@@ -17,7 +17,6 @@ const Product = (state = DEFAULT_STATE, action: ReceiveProductAction,):any => {
       debugger;
       return { ...action.payload, loading: false };
     case REQUEST_PRODUCT:
-      debugger;
       return { ...state, loading: true};
     default:
       break;

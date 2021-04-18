@@ -4,15 +4,15 @@ import { State } from "../../../Reducers";
 import Carousel from "../../../Shared/Carousel/carousel";
 
 const HeadLine: React.FC = () => {
-  const homeState = useSelector((state: State) => state.Home);
+  const { Home } = useSelector((state: State) => state);
 
   return (
     <>
-      {homeState.loading ? (
+      {Home.loading ? (
         <h1> HeadLine Loading... </h1>
       ) : (
         <div>
-          <Carousel item={homeState.showCasing} type={"HeadLine"} />
+          <Carousel key="HeadLine" item={Home.showCasing} type={"HeadLine"} />
         </div>
       )}
     </>
