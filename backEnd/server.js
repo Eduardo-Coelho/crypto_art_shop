@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
 
-app.get("/home", (req, res, next) => {
+app.get("/home", (req, res) => {
   const file = require(`./data/home/FeaturedArt.json`);
   return res.json(file);
 });
-app.get("/product", (req, res, next) => {
+app.get("/product", (req, res) => {
   try {
     const { productType } = req.query;
     console.log("params->", productType);

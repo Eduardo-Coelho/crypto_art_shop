@@ -13,7 +13,7 @@ const Product: React.FC = () => {
   const params = useParams() as RouteParams;
   useEffect(() => {
     fetchProduct(params.productSlug, store.dispatch);
-  });
+  }, []);
 
   return (
     <>

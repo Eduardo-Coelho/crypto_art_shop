@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   const store = useStore();
   useEffect(() => {
     fetchHome(store.dispatch);
-  });
+  }, []);
 
   return (
     <div>
