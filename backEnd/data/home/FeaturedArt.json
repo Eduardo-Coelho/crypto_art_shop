@@ -7,7 +7,7 @@
                 "id": "Bobby",
                 "name": "Bobby",
                 "price": 49.95,
-                "cdn": "https://cryptoart.com/wp-content/uploads/2019/05/21Million-book.jpg"
+                "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-Detail.jpg"
             },
             {
                 "id": "CryptoNouveau",
@@ -18,6 +18,18 @@
             {
                 "id": "Soldier",
                 "name": "Soldier",
+                "price": 99.95,
+                "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Soldier-small-book.jpg"
+            },
+            {
+                "id": "TheHalving",
+                "name": "Bitcoin – The Halving",
+                "price": 549.95,
+                "cdn": "https://cryptoart.com/wp-content/uploads/2015/11/halving-book.jpg"
+            },
+            {
+                "id": "BlackSwan",
+                "name": "Bitcoin Cash – Core’s Black Swan",
                 "price": 99.95,
                 "cdn": "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCash-book.jpg"
             }
