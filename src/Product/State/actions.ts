@@ -46,3 +46,14 @@ export const fetchProduct = (productSlug: string, dispatch:any): void => {
     return error;
     })
 };
+
+
+// export const fetchProduct = (productSlug: string, dispatch:any): any => async ():Promise<Product | string > => {
+//   dispatch(requestProduct(productSlug));
+//     try {
+//     const { data } = await axios.get(`${ENDPOINT_URL.Product}${productSlug}`)
+//     return dispatch(receiveProduct(data, productSlug)); 
+//     } catch (error) {
+//       return '';
+//     }
+// }

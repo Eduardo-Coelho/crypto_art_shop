@@ -1,6 +1,6 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
-import { Contents } from "../../Home/State/actions";
+import { Contents } from "../../Home/state/actions";
 import { useHistory } from "react-router-dom";
 import "./carousel.css";
 

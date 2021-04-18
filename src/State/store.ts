@@ -2,7 +2,7 @@ import {
     createStore, applyMiddleware, Store, Action,
   } from 'redux';
   import thunk, { ThunkAction } from 'redux-thunk';
-  import reducers, { State } from './Reducers';
+  import reducers, { State } from './reducers';
   
   export type Thunk<ReturnType = void> = ThunkAction<
     ReturnType,

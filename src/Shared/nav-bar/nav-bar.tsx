@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
-import "./navBar.css";
+import React from "react";
+import "./nav-bar.css";
 import Grid from "@material-ui/core/Grid";
 
 const NavBar: React.FC = () => {
-  //   useEffect(() => {
-  //   });
-
   return (
     <>
       <nav className="nav-outlayer">

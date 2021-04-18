@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { fetchProduct } from "./State/actions";
+import { fetchProduct } from "./state/actions";
 import { useParams } from "react-router-dom";
 import { useStore } from "react-redux";
-import ProductContent from "./Componets/ProductContent/productContent";
+import ProductContent from "./components/product-content/product-content";
 
 interface RouteParams {
   productSlug: string;

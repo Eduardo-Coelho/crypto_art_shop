@@ -50,3 +50,14 @@ export const fetchHome = (dispatch:any): void => {
       return error;
     })
 };
+
+// export const fetchHome = ( dispatch:any): any => async ():Promise<HomePayload | string > => {
+//   debugger;
+//   dispatch(requestHome());
+//     try {
+//     const { data } = await axios.get(`${ENDPOINT_URL.Home}`);
+//     return dispatch(receiveHome(data)); 
+//     } catch (error) {
+//       return '';
+//     }
+// }

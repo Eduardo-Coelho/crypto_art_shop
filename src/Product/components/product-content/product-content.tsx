@@ -1,9 +1,9 @@
 import { Container, Grid } from "@material-ui/core";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { State } from "../../../Reducers";
-import Carousel from "../../../Shared/Carousel/carousel";
-import "./productContent.css";
+import { State } from "../../../State/reducers";
+import Carousel from "../../../Shared/carousel/carousel";
+import "./product-content.css";
 
 const ProductContent: React.FC = () => {
   const { Product } = useSelector((state: State) => state);

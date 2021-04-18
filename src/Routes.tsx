@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./Home/";
 import NotFound from "./NotFound";
 import Product from "./Product";
-import Status from "./Shared/Status";
+import Status from "./Shared/status";
 
 export default [
   {

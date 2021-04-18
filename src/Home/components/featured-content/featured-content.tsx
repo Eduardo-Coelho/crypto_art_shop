@@ -1,9 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { State } from "../../../Reducers";
-import Carousel from "../../../Shared/Carousel/carousel";
+import { State } from "../../../State/reducers";
+import Carousel from "../../../Shared/carousel/carousel";
 import Container from "@material-ui/core/Container";
-import "./featuredContent.css";
+import "./featured-content.css";
 import { Grid } from "@material-ui/core";
 
 const FeaturedContent: React.FC = () => {
