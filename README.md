@@ -8,15 +8,14 @@ I am currently developing a full stack ecommerce application, inspired by crypto
 
 ```
 Home
+Product Page
 ```
 
-## Todo
+## Images
 
-- [x] Node Back-end
-- [x] HTTP Methods GET
-- [x] Routing
-- [x] Redux Setup
-- [x] TypeScript
+![Image of Home](./Project-IMGs/Part1.png)
+
+![Image of Home](./Project-IMGs/Part2.png)
 
 ## Available Scripts
 
