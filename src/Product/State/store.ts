@@ -1,7 +1,10 @@
-import { Product } from './actions';
-
 export interface ProductState {
   loading: boolean;
-  content: Product;
+  id: string;
+  name: string;
+  price: number;
+  availableLeft: number;
+  availableMax: number;
+  cdn: string[];
 }
 

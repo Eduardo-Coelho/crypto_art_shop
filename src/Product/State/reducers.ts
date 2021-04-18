@@ -3,14 +3,12 @@ import { ReceiveProductAction, RECEIVE_PRODUCT, REQUEST_PRODUCT } from './action
 
 const DEFAULT_STATE: ProductState = {
   loading: false,
-  content: {
     id: '',
     name: '',
     price: 0,
     availableLeft: 0,
     availableMax: 0,
     cdn: [],
-  }
 };
 
 const Product = (state = DEFAULT_STATE, action: ReceiveProductAction,):any => {
