@@ -7,8 +7,7 @@
 .gallary {
 }
 
-/* HeadLine */
-
+/* -------------------------------------------------------- HeadLine */
 .gallary-layer-HeadLine {
   padding-top: 20px;
   min-height: 60vh;
@@ -58,15 +57,6 @@
   left: 0;
   z-index: -1;
 }
-/* HeadLine END */
-
-.gallary-layer-FeaturedContent {
-}
-
-.gallary-item-FeaturedContent {
-  width: 99%;
-  height: 400px;
-}
 
 .goldText {
   background: linear-gradient(
@@ -97,4 +87,32 @@
   position: absolute;
   text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f,
     5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* -------------------------------------------------------- HeadLine END */
+
+/* -------------------------------------------------------- FeaturedContent */
+.gallary-layer-FeaturedContent {
+}
+
+.gallary-item-FeaturedContent {
+  width: 99%;
+  height: 400px;
+}
+/* -------------------------------------------------------- FeaturedContent End*/
+
+/* -------------------------------------------------------- ProductContent */
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  font-size: 35px;
+  padding: 2px 27px;
+}
+
+.gallary-layer-ProductContent {
+}
+
+.gallary-item-ProductContent {
+  width: 100%;
+  height: 500px;
 }

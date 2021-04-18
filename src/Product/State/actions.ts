@@ -1,5 +1,3 @@
-'--unhandled-rejections=strict';
-
 import axios from 'axios';
 import ENDPOINT_URL from '../../ENDPOINT_URL';
 

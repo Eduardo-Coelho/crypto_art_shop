@@ -12,12 +12,14 @@ interface Props {
 enum TypeEnum {
   HeadLine = "HeadLine",
   FeaturedContent = "FeaturedContent",
+  ProductContent = "ProductContent",
 }
 
 const Carousel: React.FC<Props> = ({ item, type }) => {
   const history = useHistory();
   let Data;
   let Responsive;
+  let disableDotsControls = true;
 
   const handleOnClick = (id: string): void => {
     history.push(`/Product${id}`);
@@ -73,6 +75,23 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
         1000: { items: 4 },
       };
       break;
+    case TypeEnum.ProductContent:
+      Data = item.map((i: string) => {
+        return (
+          <div className="gallary-layer-ProductContent">
+            <img
+              className="gallary-item-ProductContent disableselect disabledrag"
+              src={i}
+              alt=""
+            />
+          </div>
+        );
+      });
+      Responsive = {
+        1000: { items: 1 },
+      };
+      disableDotsControls = false;
+      break;
 
     default:
       break;
@@ -87,8 +106,11 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
         autoPlayDirection="ltr"
         autoPlay={true}
         mouseTracking
+        infinite={true}
+        controlsStrategy="responsive"
+        disableSlideInfo={true}
         disableButtonsControls={true}
-        disableDotsControls={true}
+        disableDotsControls={disableDotsControls}
       />
     </div>
   );

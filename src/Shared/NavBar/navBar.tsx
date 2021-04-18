@@ -1,16 +1,8 @@
 import React, { useEffect } from "react";
 import "./navBar.css";
-import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-}));
-
 const NavBar: React.FC = () => {
-  const classes = useStyles();
   //   useEffect(() => {
   //   });
 
@@ -22,7 +14,7 @@ const NavBar: React.FC = () => {
             <h1>Crypto Art Shop</h1>
           </div>
           <div className="nav-controls">
-            <div className={classes.root}>
+            <div className="nav-root">
               <Grid
                 container
                 direction="row"
