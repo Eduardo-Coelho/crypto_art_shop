@@ -7,11 +7,14 @@ app.listen(1234, () => {
     return res.json(file);
   });
   app.get("/Product", (req, res, next) => {
-    if (req.params) {
-      const file = require(`./Data/Products/${req.params}.json`);
+    const { productType } = req.query;
+    console.log("params->", productType);
+
+    if (productType) {
+      const file = require(`./Data/Products/${productType}/${productType}.json`);
       return res.json(file);
     }
-    console.log("error with the /Product params ->", req.params);
+    console.log("error with the /Product params ->", req.query);
   });
 
   console.log("Server running on port 1234");
