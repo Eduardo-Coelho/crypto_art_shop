@@ -1,6 +1,7 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import { Contents } from "../../Home/State/actions";
+import { useHistory } from "react-router-dom";
 import "./carousel.css";
 
 interface Props {
@@ -14,9 +15,13 @@ enum TypeEnum {
 }
 
 const Carousel: React.FC<Props> = ({ item, type }) => {
-  console.log("from with in the", item, type);
+  const history = useHistory();
   let Data;
   let Responsive;
+
+  const handleOnClick = (id: string): void => {
+    history.push(`/Product${id}`);
+  };
 
   switch (type) {
     case TypeEnum.HeadLine:
@@ -31,7 +36,14 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
                   Doloremque consectetur autem minus eum, maiores corporis culpa
                 </p>
               </div>
-              <button className="view-btn"> View </button>
+              <button
+                onClick={() => {
+                  handleOnClick(i.id);
+                }}
+                className="view-btn"
+              >
+                View
+              </button>
             </div>
             <img
               className="gallary-item-HeadLine disableselect disabledrag"

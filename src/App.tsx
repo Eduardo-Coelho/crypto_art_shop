@@ -12,7 +12,12 @@ const App: React.FC<AppProps> = ({ store }) => (
   <Provider store={store}>
     <Switch>
       {routes.map((route) => (
-        <Route key={route.path} path={route.path} component={route.component} />
+        <Route
+          key={route.path}
+          path={route.path}
+          exact={route.exact}
+          component={route.component}
+        />
       ))}
     </Switch>
   </Provider>

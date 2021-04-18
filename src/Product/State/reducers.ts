@@ -16,8 +16,10 @@ const DEFAULT_STATE: ProductState = {
 const Product = (state = DEFAULT_STATE, action: ReceiveProductAction,):any => {
   switch (action.type) {
     case RECEIVE_PRODUCT:
+      debugger;
       return { ...action.payload, loading: false };
     case REQUEST_PRODUCT:
+      debugger;
       return { ...state, loading: true};
     default:
       break;

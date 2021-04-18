@@ -11,7 +11,7 @@ export default [
     exact: true,
   },
   {
-    path: "/Product",
+    path: "/product:productSlug",
     component: Product,
   },
   {

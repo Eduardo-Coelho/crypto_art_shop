@@ -21,30 +21,35 @@ export interface Product {
 }
 
 export interface RequestProductAction {
+  productSlug: string;
   type: string;
 }
 
 export interface ReceiveProductAction {
   type: string;
   payload: ProductPayload;
+  productSlug: string;
 }
 
-export const requestProduct = (): RequestProductAction => ({
+export const requestProduct = (productSlug:string): RequestProductAction => ({
   type: REQUEST_PRODUCT,
+  productSlug,
 });
 
-export const receiveProduct = (payload: ProductPayload): ReceiveProductAction => ({
+export const receiveProduct = (payload: ProductPayload, productSlug: string): ReceiveProductAction => ({
   type: RECEIVE_PRODUCT,
   payload,
+  productSlug,
 });
 
-export const fetchProduct = (dispatch:any): void => {
-  dispatch(requestProduct());
-    axios.get(ENDPOINT_URL.Product).then((res:any)=>{
+
+export const fetchProduct = (productSlug: string, dispatch:any): void => {
+  dispatch(requestProduct(productSlug));
+    axios.get(`${ENDPOINT_URL.Product}&productSlug=${productSlug}`).then((res:any)=>{
     const {data} = res;
-      return dispatch(receiveProduct(data))
+    return dispatch(receiveProduct(data, productSlug));
     }).catch((error:any)=>{
     console.log(error)
-      return error;
+    return error;
     })
 };
