@@ -13,7 +13,6 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <NavBar />
       <HeadLine />
       <FeaturedContent />
     </div>
