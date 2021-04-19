@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useStore } from "react-redux";
+import { fetchHome } from "../../State/home/actions";
 import FeaturedContent from "./components/featured-content/featured-content";
 import HeadLine from "./components/head-line/head-line";
-import { fetchHome } from "./state/actions";
 
 const Home: React.FC = () => {
   const store = useStore();

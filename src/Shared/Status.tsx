@@ -1,9 +1,9 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
+import React from "react";
+import { Route } from "react-router-dom";
 
 interface StatusProps {
-    code: string;
-    children: React.ReactElement;
+  code: string;
+  children: React.ReactElement;
 }
 
 const Status: React.FC<StatusProps> = ({ code, children }) => (

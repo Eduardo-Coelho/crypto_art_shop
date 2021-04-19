@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { State } from "../../../State/reducers";
-import Carousel from "../../../Shared/carousel/carousel";
+import { State } from "../../../../State/reducers";
+import Carousel from "../../../../Shared/carousel/carousel";
 
 const HeadLine: React.FC = () => {
   const { Home } = useSelector((state: State) => state);

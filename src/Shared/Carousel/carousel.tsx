@@ -1,7 +1,8 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
-import { Contents } from "../../Home/state/actions";
+
 import { useHistory } from "react-router-dom";
+import { Contents } from "../../State/home/actions";
 import "./carousel.css";
 
 interface Props {

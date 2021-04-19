@@ -1,8 +1,8 @@
 import { Button, Container, Grid, LinearProgress } from "@material-ui/core";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { State } from "../../../State/reducers";
-import Carousel from "../../../Shared/carousel/carousel";
+import { State } from "../../../../State/reducers";
+import Carousel from "../../../../Shared/carousel/carousel";
 import "./product-content.css";
 
 const ProductContent: React.FC = () => {

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import Home from '../Home/state/reducers';
-import { HomeState }  from '../Home/state/store'; 
+import Home from './home/reducers';
+import { HomeState }  from './home/store'; 
 
-import Product from '../Product/state/reducers';
-import { ProductState } from '../Product/state/store';
+import Product from './product/reducers';
+import { ProductState } from './product/store';
 
 export interface State {
     Home: HomeState;
