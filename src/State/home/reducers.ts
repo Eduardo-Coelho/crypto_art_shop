@@ -7,7 +7,7 @@ const DEFAULT_STATE: HomeState = {
   showCasing: null,
 };
 
-const Home = (state = DEFAULT_STATE, action: ReceiveHomeAction,):any => {
+const home = (state = DEFAULT_STATE, action: ReceiveHomeAction,):any => {
 
   switch (action.type) {
     case RECEIVE_HOME:
@@ -20,4 +20,4 @@ const Home = (state = DEFAULT_STATE, action: ReceiveHomeAction,):any => {
   return state;
 }
 
-export default Home;
+export default home;

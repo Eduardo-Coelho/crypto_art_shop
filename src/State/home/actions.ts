@@ -40,24 +40,17 @@ export const receiveHome = (payload: HomePayload): ReceiveHomeAction => ({
   payload,
 });
 
-export const fetchHome = (dispatch:any): void => {
-  dispatch(requestHome());
-    axios.get(ENDPOINT_URL.Home).then((res:any)=>{
-    const {data} = res;
-      return dispatch(receiveHome(data))
-    }).catch((error:any)=>{
-    console.log(error)
-      return error;
-    })
-};
 
-// export const fetchHome = ( dispatch:any): any => async ():Promise<HomePayload | string > => {
-//   debugger;
-//   dispatch(requestHome());
-//     try {
-//     const { data } = await axios.get(`${ENDPOINT_URL.Home}`);
-//     return dispatch(receiveHome(data)); 
-//     } catch (error) {
-//       return '';
-//     }
-// }
+export const fetchHome = (): any => async (
+  dispatch: any,
+): Promise<ReceiveHomeAction | string> => {
+  dispatch(requestHome());
+
+  try {
+    const { data } = await axios.get(`${ENDPOINT_URL.Home}`);
+    return dispatch(receiveHome(data));
+  } catch (err) {
+    /** @todo Error handling. */
+    return '';
+  }
+};

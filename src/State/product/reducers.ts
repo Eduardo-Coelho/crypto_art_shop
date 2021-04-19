@@ -11,7 +11,7 @@ const DEFAULT_STATE: ProductState = {
     cdn: [],
 };
 
-const Product = (state = DEFAULT_STATE, action: ReceiveProductAction,):any => {
+const product = (state = DEFAULT_STATE, action: ReceiveProductAction,):any => {
   switch (action.type) {
     case RECEIVE_PRODUCT:
       return { ...action.payload, loading: false };
@@ -23,4 +23,4 @@ const Product = (state = DEFAULT_STATE, action: ReceiveProductAction,):any => {
   return state;
 }
 
-export default Product;
+export default product;

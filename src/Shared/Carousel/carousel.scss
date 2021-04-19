@@ -46,7 +46,6 @@
   padding: 230px 609px 0 0;
   position: absolute;
   top: 120px;
-  // box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   border-radius: 50px;
 }
 
@@ -95,12 +94,24 @@
 .gallary-featuredContent {
 }
 .gallary-layer-FeaturedContent {
+  position: relative;
 }
+
+// .hovered-layer {
+//   z-index: 999;
+//   display: block;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   padding: 100px;
+//   width: 90%;
+//   height: 300px;
+//   background-color: #000;
+// }
 
 .gallary-item-FeaturedContent {
   width: 90%;
   height: 300px;
-  position: relative;
 }
 .gallary-item-FeaturedContent:hover {
   cursor: pointer;

@@ -7,11 +7,11 @@ import "./featured-content.scss";
 import { Grid } from "@material-ui/core";
 
 const FeaturedContent: React.FC = () => {
-  const { Home } = useSelector((state: State) => state);
+  const { home } = useSelector((state: State) => state);
 
   return (
     <>
-      {Home.loading ? (
+      {home.loading ? (
         <h1> Featured Loading... </h1>
       ) : (
         <div>
@@ -20,7 +20,7 @@ const FeaturedContent: React.FC = () => {
 
             <Carousel
               key="FeaturedContent"
-              item={Home.featuredArt}
+              item={home.featuredArt}
               type={"FeaturedContent"}
             />
             <Grid container direction="row">

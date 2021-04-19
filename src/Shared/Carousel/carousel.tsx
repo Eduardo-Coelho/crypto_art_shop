@@ -22,6 +22,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
   let Responsive;
   let disableDotsControls = true;
   let gallaryClassName = "";
+  let key;
 
   const handleOnClick = (id: string): void => {
     history.push(`/Product${id}`);
@@ -29,9 +30,12 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
 
   switch (type) {
     case TypeEnum.HeadLine:
-      Data = item.contents.map((i: Contents) => {
+      Data = item.contents.map((i: Contents, index: number) => {
         return (
-          <div className="gallary-layer-HeadLine grabbable">
+          <div
+            key={`HeadLine-${index}`}
+            className="gallary-layer-HeadLine grabbable"
+          >
             <div className="layer-HeadLine">
               <div className="HeadLine-name">
                 <h1 className="goldText">{i.name}</h1>
@@ -61,11 +65,16 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
         1000: { items: 1 },
       };
       gallaryClassName = "gallary-headLine";
+      key = " gallary-headLine";
       break;
     case TypeEnum.FeaturedContent:
-      Data = item.map((i: Contents) => {
+      Data = item.map((i: Contents, index: number) => {
         return (
-          <div className="gallary-layer-FeaturedContent">
+          <div
+            key={`FeaturedContent-${index}`}
+            className="gallary-layer-FeaturedContent"
+          >
+            <div className="hovered-layer"></div>
             <img
               className="gallary-item-FeaturedContent disableselect disabledrag"
               src={i.cdn}
@@ -78,11 +87,15 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
         1000: { items: 4 },
       };
       gallaryClassName = "gallary-featuredContent";
+      key = "gallary-featuredContent";
       break;
     case TypeEnum.ProductContent:
-      Data = item.map((i: string) => {
+      Data = item.map((i: string, index: number) => {
         return (
-          <div className="gallary-layer-ProductContent">
+          <div
+            key={`ProductContent-${index}`}
+            className="gallary-layer-ProductContent"
+          >
             <img
               className="gallary-item-ProductContent disableselect disabledrag"
               src={i}
@@ -95,6 +108,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
         1000: { items: 1 },
       };
       disableDotsControls = false;
+      key = "gallary-productContent";
       break;
 
     default:
@@ -102,8 +116,9 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
   }
 
   return (
-    <div className={gallaryClassName}>
+    <div key={key} className={gallaryClassName}>
       <AliceCarousel
+        key={key}
         children={Data}
         responsive={Responsive}
         autoPlayInterval={3000}

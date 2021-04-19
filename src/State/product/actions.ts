@@ -36,24 +36,16 @@ export const receiveProduct = (payload: Product, productSlug: string): ReceivePr
 });
 
 
-export const fetchProduct = (productSlug: string, dispatch:any): void => {
+export const fetchProduct = (productSlug: string): any => async (
+  dispatch: any,
+): Promise<ReceiveProductAction | string> => {
   dispatch(requestProduct(productSlug));
-    axios.get(`${ENDPOINT_URL.Product}${productSlug}`).then((res:any)=>{
-    const {data} = res;
+
+  try {
+    const { data } = await axios.get(`${ENDPOINT_URL.Product}${productSlug}`);
     return dispatch(receiveProduct(data, productSlug));
-    }).catch((error:any)=>{
-    console.log(error)
-    return error;
-    })
+  } catch (err) {
+    /** @todo Error handling. */
+    return '';
+  }
 };
-
-
-// export const fetchProduct = (productSlug: string, dispatch:any): any => async ():Promise<Product | string > => {
-//   dispatch(requestProduct(productSlug));
-//     try {
-//     const { data } = await axios.get(`${ENDPOINT_URL.Product}${productSlug}`)
-//     return dispatch(receiveProduct(data, productSlug)); 
-//     } catch (error) {
-//       return '';
-//     }
-// }

@@ -1,13 +1,20 @@
 import React, { useEffect } from "react";
+
 import { useStore } from "react-redux";
-import { fetchHome } from "../../State/home/actions";
+import { Store } from "redux";
+
+import { fetchHome, ReceiveHomeAction } from "../../State/home/actions";
 import FeaturedContent from "./components/featured-content/featured-content";
 import HeadLine from "./components/head-line/head-line";
 
+export const fetchHomeData = (store: Store): Promise<ReceiveHomeAction> =>
+  store.dispatch(fetchHome());
+
 const Home: React.FC = () => {
   const store = useStore();
+
   useEffect(() => {
-    fetchHome(store.dispatch);
+    fetchHomeData(store);
   }, []);
 
   return (
