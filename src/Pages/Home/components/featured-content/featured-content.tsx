@@ -3,20 +3,21 @@ import { useSelector } from "react-redux";
 import { State } from "../../../../State/reducers";
 import Carousel from "../../../../Shared/carousel/carousel";
 import Container from "@material-ui/core/Container";
-import "./featured-content.css";
+import "./featured-content.scss";
 import { Grid } from "@material-ui/core";
 
 const FeaturedContent: React.FC = () => {
   const { Home } = useSelector((state: State) => state);
+
   return (
     <>
       {Home.loading ? (
         <h1> Featured Loading... </h1>
       ) : (
         <div>
-          <Container className="featured-container" maxWidth="lg">
-            <h1 className="center-text"> Featured Art </h1>
-            <hr />
+          <Container className="featured-container" maxWidth="md">
+            <h3 className="center-text"> Featured Art </h3>
+
             <Carousel
               key="FeaturedContent"
               item={Home.featuredArt}

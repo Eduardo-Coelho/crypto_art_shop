@@ -3,7 +3,7 @@ import AliceCarousel from "react-alice-carousel";
 
 import { useHistory } from "react-router-dom";
 import { Contents } from "../../State/home/actions";
-import "./carousel.css";
+import "./carousel.scss";
 
 interface Props {
   item: any;
@@ -21,6 +21,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
   let Data;
   let Responsive;
   let disableDotsControls = true;
+  let gallaryClassName = "";
 
   const handleOnClick = (id: string): void => {
     history.push(`/Product${id}`);
@@ -59,6 +60,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
       Responsive = {
         1000: { items: 1 },
       };
+      gallaryClassName = "gallary-headLine";
       break;
     case TypeEnum.FeaturedContent:
       Data = item.map((i: Contents) => {
@@ -75,6 +77,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
       Responsive = {
         1000: { items: 4 },
       };
+      gallaryClassName = "gallary-featuredContent";
       break;
     case TypeEnum.ProductContent:
       Data = item.map((i: string) => {
@@ -99,7 +102,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
   }
 
   return (
-    <div className="gallary">
+    <div className={gallaryClassName}>
       <AliceCarousel
         children={Data}
         responsive={Responsive}

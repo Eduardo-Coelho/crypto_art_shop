@@ -46,7 +46,7 @@
   padding: 230px 609px 0 0;
   position: absolute;
   top: 120px;
-  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  // box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   border-radius: 50px;
 }
 
@@ -92,13 +92,20 @@
 /* -------------------------------------------------------- HeadLine END */
 
 /* -------------------------------------------------------- FeaturedContent */
+.gallary-featuredContent {
+}
 .gallary-layer-FeaturedContent {
 }
 
 .gallary-item-FeaturedContent {
-  width: 99%;
-  height: 400px;
+  width: 90%;
+  height: 300px;
+  position: relative;
 }
+.gallary-item-FeaturedContent:hover {
+  cursor: pointer;
+}
+
 /* -------------------------------------------------------- FeaturedContent End*/
 
 /* -------------------------------------------------------- ProductContent */

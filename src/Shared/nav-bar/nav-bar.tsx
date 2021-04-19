@@ -1,6 +1,7 @@
 import React from "react";
-import "./nav-bar.css";
+import "./nav-bar.scss";
 import Grid from "@material-ui/core/Grid";
+import { Link } from "react-router-dom";
 
 const NavBar: React.FC = () => {
   return (
@@ -20,7 +21,9 @@ const NavBar: React.FC = () => {
               >
                 <Grid item xs={1}>
                   <div className="nav-item">
-                    <p>Home</p>
+                    <Link to={{ pathname: "/" }}>
+                      <p>Home</p>
+                    </Link>
                   </div>
                 </Grid>
                 <Grid item xs={2}>

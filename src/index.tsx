@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import createStore from "./State/store";
-import "./index.css";
+import "./index.scss";
 import NavBar from "./Shared/nav-bar/nav-bar";
 
 const appElement = document.getElementById("root");
