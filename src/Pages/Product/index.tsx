@@ -13,24 +13,22 @@ interface RouteParams {
   productSlug: string;
 }
 
-export const fetchProductData = (
-  store: Store,
-  params: RouteParams
-): Promise<ReceiveProductAction> =>
-  store.dispatch(fetchProduct(params.productSlug));
-
 const Product: React.FC = () => {
   const { product } = useSelector((state: State) => state);
   const store = useStore();
   const params = useParams() as RouteParams;
 
   useEffect(() => {
-    if (!product.id) {
-      fetchProductData(store, params);
+    async function fetchProductData(store: Store, params: RouteParams) {
+      await store.dispatch(fetchProduct(params.productSlug));
     }
-  }, []);
 
-  return <>{product.id ? <ProductContent /> : "Loading..."}</>;
+    fetchProductData(store, params);
+  }, [store, params]);
+
+  return (
+    <>{product.id && !product.loading ? <ProductContent /> : "Loading..."}</>
+  );
 };
 
 export default Product;

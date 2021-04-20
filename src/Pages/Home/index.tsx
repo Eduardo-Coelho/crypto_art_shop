@@ -8,18 +8,17 @@ import { State } from "../../State/reducers";
 import FeaturedContent from "./components/featured-content/featured-content";
 import HeadLine from "./components/head-line/head-line";
 
-export const fetchHomeData = (store: Store): Promise<ReceiveHomeAction> =>
-  store.dispatch(fetchHome());
-
 const Home: React.FC = () => {
   const store = useStore();
   const { home } = useSelector((state: State) => state);
 
   useEffect(() => {
-    if (!home.featuredArt) {
-      fetchHomeData(store);
+    async function fetchHomeData(store: Store) {
+      await store.dispatch(fetchHome());
     }
-  }, []);
+
+    fetchHomeData(store);
+  }, [store]);
 
   return (
     <div>
@@ -29,7 +28,7 @@ const Home: React.FC = () => {
           <FeaturedContent />
         </>
       ) : (
-        "Loading..."
+        ""
       )}
     </div>
   );
