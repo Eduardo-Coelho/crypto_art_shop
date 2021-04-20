@@ -11,69 +11,64 @@ const FeaturedContent: React.FC = () => {
 
   return (
     <>
-      {home.loading ? (
-        <h1> Featured Loading... </h1>
-      ) : (
-        <div>
-          <Container className="featured-container" maxWidth="md">
-            <h3 className="center-text"> Featured Art </h3>
+      <div>
+        <Container className="featured-container" maxWidth="md">
+          <h3 className="center-text"> Featured Art </h3>
 
-            <Carousel
-              key="FeaturedContent"
-              item={home.featuredArt}
-              type={"FeaturedContent"}
-            />
-            <Grid container direction="row">
-              <Grid item xs={3}>
-                <div className="text-item">
-                  <h2>Test 1</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolores perspiciatis deserunt magni, eos ipsam mollitia
-                    molestias maiores, voluptates tempore sunt quos itaque
-                    delectus quas aperiam natus nesciunt, corrupti beatae
-                    fugiat.
-                  </p>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div className="text-item">
-                  <h2>Test 2</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Tenetur iusto perferendis perspiciatis sunt blanditiis,
-                    nostrum ducimus iste, culpa, repudiandae exercitationem
-                    molestias cumque quasi qui eveniet accusantium eos amet nisi
-                    in.
-                  </p>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div className="text-item">
-                  <h2>Test 3</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Labore doloremque aperiam nisi alias maxime vitae, facere
-                    repellat laborum obcaecati quam error ab quos eveniet
-                    distinctio sed explicabo aspernatur dicta tenetur.
-                  </p>
-                </div>
-              </Grid>
-              <Grid item xs={3}>
-                <div className="text-item">
-                  <h2>Test 4</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Labore doloremque aperiam nisi alias maxime vitae, facere
-                    repellat laborum obcaecati quam error ab quos eveniet
-                    distinctio sed explicabo aspernatur dicta tenetur.
-                  </p>
-                </div>
-              </Grid>
+          <Carousel
+            key="FeaturedContent"
+            item={home.featuredArt}
+            type={"FeaturedContent"}
+          />
+          <Grid container direction="row">
+            <Grid item xs={3}>
+              <div className="text-item">
+                <h2>Test 1</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolores perspiciatis deserunt magni, eos ipsam mollitia
+                  molestias maiores, voluptates tempore sunt quos itaque
+                  delectus quas aperiam natus nesciunt, corrupti beatae fugiat.
+                </p>
+              </div>
             </Grid>
-          </Container>
-        </div>
-      )}
+            <Grid item xs={3}>
+              <div className="text-item">
+                <h2>Test 2</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tenetur iusto perferendis perspiciatis sunt blanditiis,
+                  nostrum ducimus iste, culpa, repudiandae exercitationem
+                  molestias cumque quasi qui eveniet accusantium eos amet nisi
+                  in.
+                </p>
+              </div>
+            </Grid>
+            <Grid item xs={3}>
+              <div className="text-item">
+                <h2>Test 3</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Labore doloremque aperiam nisi alias maxime vitae, facere
+                  repellat laborum obcaecati quam error ab quos eveniet
+                  distinctio sed explicabo aspernatur dicta tenetur.
+                </p>
+              </div>
+            </Grid>
+            <Grid item xs={3}>
+              <div className="text-item">
+                <h2>Test 4</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Labore doloremque aperiam nisi alias maxime vitae, facere
+                  repellat laborum obcaecati quam error ab quos eveniet
+                  distinctio sed explicabo aspernatur dicta tenetur.
+                </p>
+              </div>
+            </Grid>
+          </Grid>
+        </Container>
+      </div>
     </>
   );
 };

@@ -47,5 +47,5 @@ export const fetchProduct = (productSlug: string): any => async (
   } catch (err) {
     /** @todo Error handling. */
     return '';
-  }
+  } 
 };

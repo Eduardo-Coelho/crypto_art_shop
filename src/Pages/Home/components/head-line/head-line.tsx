@@ -8,13 +8,9 @@ const HeadLine: React.FC = () => {
 
   return (
     <>
-      {home.loading ? (
-        <h1> HeadLine Loading... </h1>
-      ) : (
-        <div>
-          <Carousel key="HeadLine" item={home.showCasing} type={"HeadLine"} />
-        </div>
-      )}
+      <div>
+        <Carousel key="HeadLine" item={home.showCasing} type={"HeadLine"} />
+      </div>
     </>
   );
 };

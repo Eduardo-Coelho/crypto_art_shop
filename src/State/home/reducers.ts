@@ -2,7 +2,7 @@ import { HomeState } from './store';
 import { ReceiveHomeAction, RECEIVE_HOME, REQUEST_HOME } from './actions';
 
 const DEFAULT_STATE: HomeState = {
-  loading: true,
+  loading: false,
   featuredArt: null,
   showCasing: null,
 };
