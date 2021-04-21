@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect } from "react";
 
 import { useSelector, useStore } from "react-redux";
-import { Store } from "redux";
 import ENDPOINT_URL from "../../ENDPOINT_URL";
 
 import {
@@ -35,13 +34,7 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      {home.featuredArt && home.featuredArt.length > 0 ? (
-        <>
-          <Context />
-        </>
-      ) : (
-        ""
-      )}
+      <Context home={home} />
     </div>
   );
 };
