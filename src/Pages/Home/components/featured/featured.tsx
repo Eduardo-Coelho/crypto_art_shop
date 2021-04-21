@@ -1,14 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { State } from "../../../../State/reducers";
 import Carousel from "../../../../Shared/carousel/carousel";
 import Container from "@material-ui/core/Container";
-import "./featured-content.scss";
+import "./featured.scss";
 import { Grid } from "@material-ui/core";
 
-const FeaturedContent: React.FC = () => {
-  const { home } = useSelector((state: State) => state);
-
+const FeaturedContent: React.FC<any> = ({ featuredArt }) => {
   return (
     <>
       <div>
@@ -17,7 +13,7 @@ const FeaturedContent: React.FC = () => {
 
           <Carousel
             key="FeaturedContent"
-            item={home.featuredArt}
+            item={featuredArt}
             type={"FeaturedContent"}
           />
           <Grid container direction="row">

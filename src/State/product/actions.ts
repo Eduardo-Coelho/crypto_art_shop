@@ -34,18 +34,3 @@ export const receiveProduct = (payload: Product, productSlug: string): ReceivePr
   payload,
   productSlug,
 });
-
-
-export const fetchProduct = (productSlug: string): any => async (
-  dispatch: any,
-): Promise<ReceiveProductAction | string> => {
-  dispatch(requestProduct(productSlug));
-
-  try {
-    const { data } = await axios.get(`${ENDPOINT_URL.Product}${productSlug}`);
-    return dispatch(receiveProduct(data, productSlug));
-  } catch (err) {
-    /** @todo Error handling. */
-    return '';
-  } 
-};

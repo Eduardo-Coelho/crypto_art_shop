@@ -1,15 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { State } from "../../../../State/reducers";
 import Carousel from "../../../../Shared/carousel/carousel";
 
-const HeadLine: React.FC = () => {
-  const { home } = useSelector((state: State) => state);
-
+const HeadLine: React.FC<any> = ({ showCasing }) => {
   return (
     <>
       <div>
-        <Carousel key="HeadLine" item={home.showCasing} type={"HeadLine"} />
+        <Carousel key="HeadLine" item={showCasing} type={"HeadLine"} />
       </div>
     </>
   );

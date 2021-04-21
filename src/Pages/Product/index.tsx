@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom";
 import { useSelector, useStore } from "react-redux";
 import ProductContent from "./components/product-content/product-content";
 import {
-  fetchProduct,
+  receiveProduct,
   ReceiveProductAction,
+  requestProduct,
 } from "../../State/product/actions";
-import { Store } from "redux";
 import { State } from "../../State/reducers";
+import axios from "axios";
+import ENDPOINT_URL from "../../ENDPOINT_URL";
 
 interface RouteParams {
   productSlug: string;
@@ -19,16 +21,26 @@ const Product: React.FC = () => {
   const params = useParams() as RouteParams;
 
   useEffect(() => {
-    async function fetchProductData(store: Store, params: RouteParams) {
-      await store.dispatch(fetchProduct(params.productSlug));
+    async function fetchProduct(
+      productSlug: string
+    ): Promise<ReceiveProductAction | string> {
+      store.dispatch(requestProduct(productSlug));
+
+      try {
+        const { data } = await axios.get(
+          `${ENDPOINT_URL.Product}${productSlug}`
+        );
+        return store.dispatch(receiveProduct(data, productSlug));
+      } catch (err) {
+        /** @todo Error handling. */
+        return "";
+      }
     }
 
-    fetchProductData(store, params);
+    fetchProduct(params.productSlug);
   }, [store, params]);
 
-  return (
-    <>{product.id && !product.loading ? <ProductContent /> : "Loading..."}</>
-  );
+  return <>{product.id && product.cdn ? <ProductContent /> : "Loading..."}</>;
 };
 
 export default Product;

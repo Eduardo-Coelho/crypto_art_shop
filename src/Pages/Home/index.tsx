@@ -1,31 +1,43 @@
+import axios from "axios";
 import React, { useEffect } from "react";
 
 import { useSelector, useStore } from "react-redux";
 import { Store } from "redux";
+import ENDPOINT_URL from "../../ENDPOINT_URL";
 
-import { fetchHome, ReceiveHomeAction } from "../../State/home/actions";
+import {
+  receiveHome,
+  ReceiveHomeAction,
+  requestHome,
+} from "../../State/home/actions";
 import { State } from "../../State/reducers";
-import FeaturedContent from "./components/featured-content/featured-content";
-import HeadLine from "./components/head-line/head-line";
+import Context from "./components/Context/Context";
 
 const Home: React.FC = () => {
   const store = useStore();
   const { home } = useSelector((state: State) => state);
 
   useEffect(() => {
-    async function fetchHomeData(store: Store) {
-      await store.dispatch(fetchHome());
+    async function fetchHome(): Promise<ReceiveHomeAction | string> {
+      store.dispatch(requestHome());
+
+      try {
+        const { data } = await axios.get(`${ENDPOINT_URL.Home}`);
+        return store.dispatch(receiveHome(data));
+      } catch (err) {
+        /** @todo Error handling. */
+        return "";
+      }
     }
 
-    fetchHomeData(store);
+    fetchHome();
   }, [store]);
 
   return (
     <div>
       {home.featuredArt && home.featuredArt.length > 0 ? (
         <>
-          <HeadLine />
-          <FeaturedContent />
+          <Context />
         </>
       ) : (
         ""
