@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AliceCarousel from "react-alice-carousel";
 
 import { useHistory } from "react-router-dom";
@@ -28,91 +28,88 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
     history.push(`/Product${id}`);
   };
 
-  switch (type) {
-    case TypeEnum.HeadLine:
-      Data = item.contents.map((i: Contents, index: number) => {
-        return (
-          <div
-            key={`HeadLine-${index}`}
-            className="gallary-layer-HeadLine grabbable"
-          >
-            <div className="layer-HeadLine">
-              <div className="HeadLine-name">
-                <h1 className="goldText">{i.name}</h1>
-                <p className="sub-text">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Doloremque consectetur autem minus eum, maiores corporis culpa
-                </p>
-              </div>
-              <button
-                onClick={() => {
-                  handleOnClick(i.id);
-                }}
-                className="view-btn"
-              >
-                View
-              </button>
+  if (TypeEnum.HeadLine === type) {
+    Data = item.contents.map((i: Contents, index: number) => {
+      return (
+        <div
+          key={`HeadLine-${index}`}
+          className="gallary-layer-HeadLine grabbable"
+        >
+          <div className="layer-HeadLine">
+            <div className="HeadLine-name">
+              <h1 className="goldText">{i.name}</h1>
+              <p className="sub-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Doloremque consectetur autem minus eum, maiores corporis culpa
+              </p>
             </div>
-            <img
-              className="gallary-item-HeadLine disableselect disabledrag"
-              src={i.cdn}
-              alt=""
-            />
+            <button
+              onClick={() => {
+                handleOnClick(i.id);
+              }}
+              className="view-btn"
+            >
+              View
+            </button>
           </div>
-        );
-      });
-      Responsive = {
-        1000: { items: 1 },
-      };
-      gallaryClassName = "gallary-headLine";
-      key = " gallary-headLine";
-      break;
-    case TypeEnum.FeaturedContent:
-      Data = item.map((i: Contents, index: number) => {
-        return (
-          <div
-            key={`FeaturedContent-${index}`}
-            className="gallary-layer-FeaturedContent"
-          >
-            <div className="hovered-layer"></div>
-            <img
-              className="gallary-item-FeaturedContent disableselect disabledrag"
-              src={i.cdn}
-              alt=""
-            />
-          </div>
-        );
-      });
-      Responsive = {
-        1000: { items: 4 },
-      };
-      gallaryClassName = "gallary-featuredContent";
-      key = "gallary-featuredContent";
-      break;
-    case TypeEnum.ProductContent:
-      Data = item.map((i: string, index: number) => {
-        return (
-          <div
-            key={`ProductContent-${index}`}
-            className="gallary-layer-ProductContent"
-          >
-            <img
-              className="gallary-item-ProductContent disableselect disabledrag"
-              src={i}
-              alt=""
-            />
-          </div>
-        );
-      });
-      Responsive = {
-        1000: { items: 1 },
-      };
-      disableDotsControls = false;
-      key = "gallary-productContent";
-      break;
+          <img
+            className="gallary-item-HeadLine disableselect disabledrag"
+            src={i.cdn}
+            alt=""
+          />
+        </div>
+      );
+    });
+    Responsive = {
+      1000: { items: 1 },
+    };
+    gallaryClassName = "gallary-headLine";
+    key = " gallary-headLine";
+  }
 
-    default:
-      break;
+  // if (TypeEnum.FeaturedContent === type) {
+  //   Data = item.map((i: Contents, index: number) => {
+  //     return (
+  //       <div
+  //         key={`FeaturedContent-${index}`}
+  //         className="gallary-layer-FeaturedContent"
+  //       >
+  //         <div className="hovered-layer"></div>
+  //         <img
+  //           className="gallary-item-FeaturedContent disableselect disabledrag"
+  //           src={i.cdn}
+  //           alt=""
+  //         />
+  //       </div>
+  //     );
+  //   });
+  //   Responsive = {
+  //     1000: { items: 4 },
+  //   };
+  //   gallaryClassName = "gallary-featuredContent";
+  //   key = "gallary-featuredContent";
+  // }
+
+  if (TypeEnum.ProductContent === type) {
+    Data = item.map((i: string, index: number) => {
+      return (
+        <div
+          key={`ProductContent-${index}`}
+          className="gallary-layer-ProductContent"
+        >
+          <img
+            className="gallary-item-ProductContent disableselect disabledrag"
+            src={i}
+            alt=""
+          />
+        </div>
+      );
+    });
+    Responsive = {
+      1000: { items: 1 },
+    };
+    disableDotsControls = false;
+    key = "gallary-productContent";
   }
 
   return (
