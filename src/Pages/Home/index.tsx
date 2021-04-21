@@ -30,7 +30,7 @@ const Home: React.FC = () => {
     }
 
     fetchHome();
-  }, [store, home]);
+  }, []);
 
   return (
     <div>

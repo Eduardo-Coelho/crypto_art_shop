@@ -38,7 +38,7 @@ const Product: React.FC = () => {
     }
 
     fetchProduct(params.productSlug);
-  }, [store, params]);
+  }, []);
 
   return <>{product.id && product.cdn ? <ProductContent /> : "Loading..."}</>;
 };

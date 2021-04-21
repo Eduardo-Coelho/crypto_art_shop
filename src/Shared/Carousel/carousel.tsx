@@ -67,28 +67,28 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
     key = " gallary-headLine";
   }
 
-  // if (TypeEnum.FeaturedContent === type) {
-  //   Data = item.map((i: Contents, index: number) => {
-  //     return (
-  //       <div
-  //         key={`FeaturedContent-${index}`}
-  //         className="gallary-layer-FeaturedContent"
-  //       >
-  //         <div className="hovered-layer"></div>
-  //         <img
-  //           className="gallary-item-FeaturedContent disableselect disabledrag"
-  //           src={i.cdn}
-  //           alt=""
-  //         />
-  //       </div>
-  //     );
-  //   });
-  //   Responsive = {
-  //     1000: { items: 4 },
-  //   };
-  //   gallaryClassName = "gallary-featuredContent";
-  //   key = "gallary-featuredContent";
-  // }
+  if (TypeEnum.FeaturedContent === type) {
+    Data = item.map((i: Contents, index: number) => {
+      return (
+        <div
+          key={`FeaturedContent-${index}`}
+          className="gallary-layer-FeaturedContent"
+        >
+          <div className="hovered-layer"></div>
+          <img
+            className="gallary-item-FeaturedContent disableselect disabledrag"
+            src={i.cdn}
+            alt=""
+          />
+        </div>
+      );
+    });
+    Responsive = {
+      1000: { items: 4 },
+    };
+    gallaryClassName = "gallary-featuredContent";
+    key = "gallary-featuredContent";
+  }
 
   if (TypeEnum.ProductContent === type) {
     Data = item.map((i: string, index: number) => {
