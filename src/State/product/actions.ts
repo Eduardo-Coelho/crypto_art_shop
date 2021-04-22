@@ -1,6 +1,3 @@
-import axios from 'axios';
-import ENDPOINT_URL from '../../ENDPOINT_URL';
-
 export const REQUEST_PRODUCT = 'request_product';
 export const RECEIVE_PRODUCT = 'receive_product';
 

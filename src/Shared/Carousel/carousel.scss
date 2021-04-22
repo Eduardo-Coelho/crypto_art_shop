@@ -27,8 +27,9 @@
 
 .view-btn {
   position: relative;
-  left: 460px;
   top: -10px;
+  left: 582px;
+  border-radius: 10px 10px;
   color: #fff;
   font-weight: bold;
   background-color: rgba(248, 228, 137, 0.486);
@@ -58,15 +59,7 @@
 }
 
 .goldText {
-  background: linear-gradient(
-    to bottom,
-    #cfc09f 22%,
-    #634f2c 24%,
-    #cfc09f 26%,
-    #cfc09f 27%,
-    #ffecb3 40%,
-    #3a2c0f 78%
-  );
+  background: linear-gradient(to bottom, rgb(216, 91, 42) 22%, #ddb359 78%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #fff;

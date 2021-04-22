@@ -1,6 +1,3 @@
-import axios from 'axios';
-import ENDPOINT_URL from '../../ENDPOINT_URL';
-
 export const REQUEST_HOME = 'request_home';
 export const RECEIVE_HOME = 'receive_home';
 

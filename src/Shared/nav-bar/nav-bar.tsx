@@ -1,6 +1,8 @@
 import React from "react";
 import "./nav-bar.scss";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar: React.FC = () => {
   return (
@@ -11,6 +13,14 @@ const NavBar: React.FC = () => {
             <h1>Crypto Art Shop</h1>
           </div>
           <ul className="nav-controls">
+            <li className="nav-item">
+              <FontAwesomeIcon className="icon" icon={faShoppingCart} />
+            </li>
+
+            <li className="nav-item">
+              <FontAwesomeIcon className="icon" icon={faUser} />
+            </li>
+
             <li className="nav-item">
               <p>How Cryptoart Works</p>
             </li>
