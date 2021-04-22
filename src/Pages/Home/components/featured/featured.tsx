@@ -17,6 +17,7 @@ const FeaturedContent: React.FC<any> = ({ featuredArt }) => {
             item={featuredArt}
             type={"FeaturedContent"}
           />
+
           <Grid container direction="row">
             <Grid item xs={3}>
               <div className="text-item">

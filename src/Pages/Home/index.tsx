@@ -37,7 +37,7 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <Context home={home} />
+      <Context />
     </div>
   );
 };

@@ -8,14 +8,8 @@ import "./index.scss";
 import NavBar from "./Shared/nav-bar/nav-bar";
 
 const appElement = document.getElementById("root");
-declare global {
-  interface Window {
-    PreloadedState: {};
-  }
-}
 
-const preloadedState = window.PreloadedState || {};
-const store = createStore(preloadedState);
+const store = createStore();
 
 const Index: React.FC = () => (
   <Router>
