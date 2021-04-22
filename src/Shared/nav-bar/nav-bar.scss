@@ -1,9 +1,29 @@
-.nav-root {
-  flex-grow: 0;
+.nav-controls {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  margin: -116px 10px 10px;
 }
 
+.nav-item {
+  float: right;
+}
+
+.nav-item {
+  display: block;
+  color: black;
+  padding: 14px 16px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+// .nav-item:hover {
+//   background-color: #111;
+// }
+
 .nav-outlayer {
-  padding: 60px;
   z-index: 1;
   position: relative;
   box-shadow: 0 11px 13px -9px #ccc;
@@ -14,18 +34,5 @@
   font-family: "Bebas Neue", cursive;
   font-size: 34px;
   color: rgb(82, 82, 82);
-  margin: -91px 0px 0px 0px;
-}
-
-.nav-controls {
-  text-align: right;
-  margin: -104px 0 -64px 0px;
-}
-
-.nav-item {
-  cursor: pointer;
-  font-family: "Bebas Neue", cursive;
-  padding: 5px;
-  color: rgb(82, 82, 82);
-  font-size: 25px;
+  margin: 0 20px;
 }
