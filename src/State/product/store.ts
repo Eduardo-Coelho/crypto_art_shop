@@ -1,4 +1,5 @@
 export interface ProductState {
+  productSlug: string;
   loading: boolean;
   id: string;
   name: string;

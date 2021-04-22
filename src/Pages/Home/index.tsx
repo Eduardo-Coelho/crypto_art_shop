@@ -17,6 +17,9 @@ const Home: React.FC = () => {
   const { home } = useSelector((state: State) => state);
 
   useEffect(() => {
+    if (home.featuredArt && home.showCasing) {
+      return;
+    }
     async function fetchHome(): Promise<ReceiveHomeAction | string> {
       store.dispatch(requestHome());
 
@@ -30,7 +33,7 @@ const Home: React.FC = () => {
     }
 
     fetchHome();
-  }, []);
+  }, [home]);
 
   return (
     <div>

@@ -21,6 +21,9 @@ const Product: React.FC = () => {
   const params = useParams() as RouteParams;
 
   useEffect(() => {
+    if (params.productSlug === product.productSlug) {
+      return;
+    }
     async function fetchProduct(
       productSlug: string
     ): Promise<ReceiveProductAction | string> {
@@ -38,7 +41,7 @@ const Product: React.FC = () => {
     }
 
     fetchProduct(params.productSlug);
-  }, []);
+  }, [params]);
 
   return <>{product.id && product.cdn ? <ProductContent /> : "Loading..."}</>;
 };

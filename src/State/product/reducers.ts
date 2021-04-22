@@ -2,6 +2,7 @@ import { ProductState } from './store';
 import { ReceiveProductAction, RECEIVE_PRODUCT, REQUEST_PRODUCT } from './actions';
 
 const DEFAULT_STATE: ProductState = {
+  productSlug: '',
   loading: false,
     id: '',
     name: '',
@@ -14,7 +15,7 @@ const DEFAULT_STATE: ProductState = {
 const product = (state = DEFAULT_STATE, action: ReceiveProductAction,):any => {
   switch (action.type) {
     case RECEIVE_PRODUCT:
-      return { ...action.payload, loading: false };
+      return { ...action.payload, productSlug: action.productSlug, loading: false };
     case REQUEST_PRODUCT:
       return { ...state, loading: true};
     default:
