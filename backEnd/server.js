@@ -5,16 +5,25 @@ app.get("/home", (req, res) => {
   const file = require(`./data/home/FeaturedArt.json`);
   return res.json(file);
 });
-app.get("/product", (req, res) => {
+
+/**
+ *
+ * @description Get the Product
+ *
+ */
+
+const getProducts = async (req, res) => {
   try {
-    const { productType } = req.query;
-    console.log("params->", productType);
-    const file = require(`./data/products/${productType}/${productType}.json`);
+    const { productSlug } = req.params;
+    const file = await require(`./data/products/${productSlug}/${productSlug}.json`);
     return res.json(file);
   } catch (error) {
-    console.log(error);
+    console.error(error);
+    res.status(500);
   }
-});
+};
+
+app.get("/product:productSlug", getProducts);
 
 app.listen(1234, () => {
   console.log("Server running on port 1234");

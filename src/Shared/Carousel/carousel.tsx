@@ -25,7 +25,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
   let key;
 
   const handleOnClick = (id: string): void => {
-    history.push(`/Product${id}`);
+    history.push(`/product${id}`);
   };
 
   if (TypeEnum.HeadLine === type) {
