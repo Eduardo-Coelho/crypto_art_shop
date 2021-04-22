@@ -1,10 +1,25 @@
 const express = require("express");
 const app = express();
 
-app.get("/home", (req, res) => {
-  const file = require(`./data/home/FeaturedArt.json`);
-  return res.json(file);
-});
+const PORT = 1234;
+
+/**
+ *
+ * @description Get Home page data
+ *
+ */
+
+const getHome = async (req, res) => {
+  try {
+    const file = await require(`./data/home/FeaturedArt.json`);
+    return res.json(file);
+  } catch (error) {
+    console.error(error);
+    res.status(500);
+  }
+};
+
+app.get("/home", getHome);
 
 /**
  *
@@ -25,6 +40,6 @@ const getProducts = async (req, res) => {
 
 app.get("/product:productSlug", getProducts);
 
-app.listen(1234, () => {
-  console.log("Server running on port 1234");
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
