@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AliceCarousel from "react-alice-carousel";
 
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Contents } from "../../State/home/actions";
 import "./carousel.scss";
 
@@ -17,16 +17,11 @@ enum TypeEnum {
 }
 
 const Carousel: React.FC<Props> = ({ item, type }) => {
-  const history = useHistory();
   let Data;
   let Responsive;
   let disableDotsControls = true;
   let gallaryClassName = "";
   let key;
-
-  const handleOnClick = (id: string): void => {
-    history.push(`/product${id}`);
-  };
 
   if (TypeEnum.HeadLine === type) {
     Data = item.contents.map((i: Contents, index: number) => {
@@ -43,14 +38,9 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
                 Doloremque consectetur autem minus eum, maiores corporis culpa
               </p>
             </div>
-            <button
-              onClick={() => {
-                handleOnClick(i.id);
-              }}
-              className="view-btn"
-            >
-              View
-            </button>
+            <Link to={{ pathname: `/product${i.id}` }}>
+              <button className="view-btn">View</button>
+            </Link>
           </div>
           <img
             className="gallary-item-HeadLine disableselect disabledrag"
