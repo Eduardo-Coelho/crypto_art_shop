@@ -30,6 +30,7 @@ app.get("/home", getHome);
 const getProducts = async (req, res) => {
   try {
     const { productSlug } = req.params;
+    console.log("Product ->", productSlug);
     const file = await require(`./data/products/${productSlug}/${productSlug}.json`);
     return res.json(file);
   } catch (error) {

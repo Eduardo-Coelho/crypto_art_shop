@@ -1,4 +1,4 @@
-import Home from "./Pages/Home";
+import Home, { fetchHomeData } from "./Pages/Home";
 import NotFound from "./Pages/NotFound";
 import Product from "./Pages/Product";
 
@@ -7,13 +7,14 @@ export default [
     path: "/",
     component: Home,
     exact: true,
+    loadData: fetchHomeData,
   },
   {
-    path: "/product:productSlug",
+    path: "/product/:productSlug",
     component: Product,
   },
   {
     path: "*",
-    component: NotFound,
+    component: (): React.ReactElement => <NotFound />,
   },
 ];

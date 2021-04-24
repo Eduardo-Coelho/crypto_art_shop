@@ -1,3 +1,6 @@
+import axios from 'axios';
+import ENDPOINT_URL from '../../ENDPOINT_URL';
+
 export const REQUEST_PRODUCT = 'request_product';
 export const RECEIVE_PRODUCT = 'receive_product';
 
@@ -26,8 +29,23 @@ export const requestProduct = (productSlug:string): RequestProductAction => ({
   productSlug,
 });
 
-export const receiveProduct = (payload: Product, productSlug: string): ReceiveProductAction => ({
+export const receiveProduct = ( productSlug: string, payload: Product,): ReceiveProductAction => ({
   type: RECEIVE_PRODUCT,
   payload,
   productSlug,
 });
+
+
+export const fetchProduct = (productSlug: string): any => async (
+  dispatch: any,
+): Promise<ReceiveProductAction | string> => {
+  dispatch(requestProduct(productSlug));
+
+  try {
+    const { data } = await axios.get(`${ENDPOINT_URL.Product}${productSlug}`);
+    return dispatch(receiveProduct(productSlug, data));
+  } catch (err) {
+    /** @todo Error handling. */
+    return '';
+  }
+};
