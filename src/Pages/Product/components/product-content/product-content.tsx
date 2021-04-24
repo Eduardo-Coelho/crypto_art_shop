@@ -1,7 +1,7 @@
 import { Button, Container, Grid, LinearProgress } from "@material-ui/core";
 import React from "react";
-import Carousel from "../../../../Shared/carousel/carousel";
-import "./product-content.css";
+import CarouselProduct from "../../../../Shared/carousel/carousel-product";
+import "./product-content.scss";
 
 const ProductContent: React.FC<any> = ({ product }) => {
   return (
@@ -10,7 +10,7 @@ const ProductContent: React.FC<any> = ({ product }) => {
         <Container className="product-container" maxWidth="xl">
           <Grid container direction="row" justify="center" alignItems="stretch">
             <Grid item md={3}>
-              <Carousel item={product.cdn} type="ProductContent" />
+              <CarouselProduct item={product.cdn} />
             </Grid>
             <Grid className="text-center" item md={3}>
               <h1>{product.name}</h1>

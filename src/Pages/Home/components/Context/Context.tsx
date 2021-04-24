@@ -3,7 +3,6 @@ import FeaturedContent from "../featured/featured";
 import HeadLine from "../head-line/head-line";
 
 const Context: React.FC<any> = ({ home }) => {
-  debugger;
   return (
     <>
       <HeadLine showCasing={home.showCasing} />

@@ -22,7 +22,6 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
   let disableDotsControls = true;
   let gallaryClassName = "";
   let key;
-
   if (TypeEnum.HeadLine === type) {
     Data = item.contents.map((i: Contents, index: number) => {
       return (

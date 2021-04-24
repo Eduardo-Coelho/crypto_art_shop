@@ -1,5 +1,8 @@
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 import ENDPOINT_URL from '../../ENDPOINT_URL';
+import { State } from '../reducers';
+import { HomeState } from './store';
 
 export const REQUEST_HOME = 'request_home';
 export const RECEIVE_HOME = 'receive_home';
@@ -39,6 +42,12 @@ export const receiveHome = (payload: HomePayload): ReceiveHomeAction => ({
   type: RECEIVE_HOME,
   payload,
 });
+
+
+export const GetHomeState = (): HomeState => {
+  const { home } = useSelector((state: State) => state);
+  return home;
+}
 
   export const fetchHome = (): any => async (
     dispatch: any,

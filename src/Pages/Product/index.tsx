@@ -25,10 +25,6 @@ const Product: React.FC = () => {
   const product = GetProductState();
 
   useEffect(() => {
-    if (product.productSlug === params.productSlug) {
-      return;
-    }
-
     fetchProducttData(store, params);
   }, []);
 

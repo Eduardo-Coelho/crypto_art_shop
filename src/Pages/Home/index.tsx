@@ -1,21 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useStore } from "react-redux";
 import { Store } from "redux";
 
-import { fetchHome, ReceiveHomeAction } from "../../State/home/actions";
+import {
+  fetchHome,
+  GetHomeState,
+  ReceiveHomeAction,
+} from "../../State/home/actions";
 import Context from "./components/Context/Context";
 
-export const fetchHomeData = (store: Store): Promise<ReceiveHomeAction> =>
+const fetchHomeData = (store: Store): Promise<ReceiveHomeAction> =>
   store.dispatch(fetchHome());
 
 const Home: React.FC = () => {
   const store = useStore();
-  fetchHomeData(store);
-  return (
-    <div>
-      <Context />
-    </div>
-  );
+  const home = GetHomeState();
+  useEffect(() => {
+    if (home.featuredArt && home.showCasing) {
+      return;
+    }
+    fetchHomeData(store);
+  }, []);
+
+  return <>{!home.loading ? <Context home={home} /> : ""}</>;
 };
 
 export default Home;

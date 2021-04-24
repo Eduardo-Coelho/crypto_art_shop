@@ -1,5 +1,8 @@
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 import ENDPOINT_URL from '../../ENDPOINT_URL';
+import { State } from '../reducers';
+import { ProductState } from './store';
 
 export const REQUEST_PRODUCT = 'request_product';
 export const RECEIVE_PRODUCT = 'receive_product';
@@ -34,6 +37,11 @@ export const receiveProduct = ( productSlug: string, payload: Product,): Receive
   payload,
   productSlug,
 });
+
+export const GetProductState = ():ProductState => {
+  const { product } = useSelector((state: State) => state);
+  return product;
+}
 
 
 export const fetchProduct = (productSlug: string): any => async (

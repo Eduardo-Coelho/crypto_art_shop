@@ -12,12 +12,12 @@ const DEFAULT_STATE: ProductState = {
     cdn: [],
 };
 
-const product = (state = DEFAULT_STATE, action: ReceiveProductAction,):any => {
+const product = (state = DEFAULT_STATE, action: ReceiveProductAction ):ProductState => {
   switch (action.type) {
     case RECEIVE_PRODUCT:
       return { ...action.payload, productSlug: action.productSlug, loading: false };
     case REQUEST_PRODUCT:
-      return { loading: true};
+      return {...state, loading: true};
     default:
       break;
   }

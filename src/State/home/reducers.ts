@@ -7,16 +7,16 @@ const DEFAULT_STATE: HomeState = {
   showCasing: null,
 };
 
-const home = (state = DEFAULT_STATE, action: ReceiveHomeAction,):any => {
-
+const home = (state = DEFAULT_STATE, action: ReceiveHomeAction):HomeState => {
   switch (action.type) {
     case RECEIVE_HOME:
       return { ...action.payload, loading: false };
     case REQUEST_HOME:
-      return {loading: true};
+      return { ...state, loading: true};
     default:
       break;
   }
+
   return state;
 }
 
