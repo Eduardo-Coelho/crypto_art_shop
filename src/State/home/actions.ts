@@ -1,3 +1,6 @@
+import axios from 'axios';
+import ENDPOINT_URL from '../../ENDPOINT_URL';
+
 export const REQUEST_HOME = 'request_home';
 export const RECEIVE_HOME = 'receive_home';
 
@@ -36,3 +39,17 @@ export const receiveHome = (payload: HomePayload): ReceiveHomeAction => ({
   type: RECEIVE_HOME,
   payload,
 });
+
+  export const fetchHome = (): any => async (
+    dispatch: any,
+  ): Promise<ReceiveHomeAction | string> => {
+    dispatch(requestHome());
+  
+    try {
+      const { data } = await axios.get(`${ENDPOINT_URL.Home}`);
+      return dispatch(receiveHome(data));
+    } catch (err) {
+      /** @todo Error handling. */
+      return '';
+    }
+  };
