@@ -5,7 +5,7 @@ const HeadLine: React.FC<any> = ({ showCasing }) => {
   return (
     <>
       <div>
-        <Carousel key="HeadLine" item={showCasing} type={"HeadLine"} />
+        <Carousel item={showCasing} type={"HeadLine"} />
       </div>
     </>
   );

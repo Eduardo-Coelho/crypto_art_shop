@@ -1,27 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { State } from "../../../../State/reducers";
 import FeaturedContent from "../featured/featured";
 import HeadLine from "../head-line/head-line";
 
-const Context: React.FC = () => {
-  const { home } = useSelector((state: State) => state);
-
+const Context: React.FC<any> = ({ home }) => {
+  debugger;
   return (
     <>
-      <div>
-        {home.showCasing ? (
-          <HeadLine showCasing={home.showCasing} />
-        ) : (
-          <h1>Loading...</h1>
-        )}
-
-        {home.featuredArt && home.featuredArt.length > 0 ? (
-          <FeaturedContent featuredArt={home.featuredArt} />
-        ) : (
-          <h1>Loading...</h1>
-        )}
-      </div>
+      <HeadLine showCasing={home.showCasing} />
+      <FeaturedContent featuredArt={home.featuredArt} />
     </>
   );
 };

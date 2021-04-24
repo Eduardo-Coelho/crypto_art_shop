@@ -3,7 +3,7 @@ import { ReceiveProductAction, RECEIVE_PRODUCT, REQUEST_PRODUCT } from './action
 
 const DEFAULT_STATE: ProductState = {
   productSlug: '',
-  loading: false,
+  loading: true,
     id: '',
     name: '',
     price: 0,
@@ -17,7 +17,7 @@ const product = (state = DEFAULT_STATE, action: ReceiveProductAction,):any => {
     case RECEIVE_PRODUCT:
       return { ...action.payload, productSlug: action.productSlug, loading: false };
     case REQUEST_PRODUCT:
-      return { ...state, loading: true};
+      return { loading: true};
     default:
       break;
   }

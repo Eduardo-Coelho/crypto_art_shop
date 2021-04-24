@@ -4,6 +4,7 @@ import { useStore } from "react-redux";
 import ProductContent from "./components/product-content/product-content";
 import {
   fetchProduct,
+  GetProductState,
   ReceiveProductAction,
 } from "../../State/product/actions";
 import { Store } from "redux";
@@ -12,7 +13,7 @@ interface RouteParams {
   productSlug: string;
 }
 
-export const fetchProducttData = (
+const fetchProducttData = (
   store: Store,
   params: RouteParams
 ): Promise<ReceiveProductAction> =>
@@ -21,14 +22,19 @@ export const fetchProducttData = (
 const Product: React.FC = () => {
   const store = useStore();
   const params = useParams() as RouteParams;
+  const product = GetProductState();
 
   useEffect(() => {
+    if (product.productSlug === params.productSlug) {
+      return;
+    }
+
     fetchProducttData(store, params);
   }, []);
 
   return (
     <>
-      <ProductContent />
+      {!product.loading ? <ProductContent product={product} /> : "Loading..."}
     </>
   );
 };

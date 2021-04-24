@@ -103,9 +103,8 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
   }
 
   return (
-    <div key={key} className={gallaryClassName}>
+    <div className={gallaryClassName}>
       <AliceCarousel
-        key={key}
         children={Data}
         responsive={Responsive}
         autoPlayInterval={3000}
