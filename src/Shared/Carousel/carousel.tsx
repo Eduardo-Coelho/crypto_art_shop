@@ -1,7 +1,7 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
 
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Contents } from "../../State/home/actions";
 import "./carousel.scss";
 
@@ -38,7 +38,7 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
                 Doloremque consectetur autem minus eum, maiores corporis culpa
               </p>
             </div>
-            <Link to={{ pathname: `/product${i.id}` }}>
+            <Link to={{ pathname: `/product/${i.id}` }}>
               <button className="view-btn">View</button>
             </Link>
           </div>

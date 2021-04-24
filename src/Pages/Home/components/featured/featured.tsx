@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Carousel from "../../../../Shared/carousel/carousel";
 import Container from "@material-ui/core/Container";
 import "./featured.scss";
 import { Grid } from "@material-ui/core";
-import { Contents } from "../../../../State/home/actions";
 
 const FeaturedContent: React.FC<any> = ({ featuredArt }) => {
+  const intervalRef = useRef(0);
+
+  useEffect(() => {
+    intervalRef.current = 1;
+  }, []);
+
   return (
     <>
       <div>
         <Container className="featured-container" maxWidth="md">
           <h3 className="center-text"> Featured Art </h3>
 
-          <Carousel
-            key="FeaturedContent"
-            item={featuredArt}
-            type={"FeaturedContent"}
-          />
+          {intervalRef.current === 1 ? (
+            <Carousel
+              key="FeaturedContent"
+              item={featuredArt}
+              type={"FeaturedContent"}
+            />
+          ) : (
+            "LOading..."
+          )}
 
           <Grid container direction="row">
             <Grid item xs={3}>
