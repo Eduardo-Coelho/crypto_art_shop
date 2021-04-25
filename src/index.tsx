@@ -5,7 +5,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import createStore from "./State/store";
 import "./index.scss";
-import NavBar from "./Shared/nav-bar/nav-bar";
 
 const appElement = document.getElementById("root");
 
@@ -13,7 +12,6 @@ const store = createStore();
 
 const Index: React.FC = () => (
   <Router>
-    <NavBar />
     <App store={store} />
   </Router>
 );

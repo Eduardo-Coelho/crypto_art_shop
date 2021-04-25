@@ -35,7 +35,11 @@ const Product: React.FC = () => {
 
   return (
     <>
-      {!product.loading ? <ProductContent product={product} /> : "Loading..."}
+      {!product.loading ? (
+        <ProductContent product={product} store={store} />
+      ) : (
+        "Loading..."
+      )}
     </>
   );
 };

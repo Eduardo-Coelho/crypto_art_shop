@@ -1,11 +1,13 @@
 import { Button, Container, Grid, LinearProgress } from "@material-ui/core";
 import React from "react";
+import { useStore } from "react-redux";
 import Carousel, {
   TypeEnumCarousel,
 } from "../../../../Shared/carousel/carousel";
+import { AddToBasket } from "../../../../State/shopping-cart/actions";
 import "./product-content.scss";
 
-const ProductContent: React.FC<any> = ({ product }) => {
+const ProductContent: React.FC<any> = ({ product, store }) => {
   return (
     <>
       <div className="product-body">
@@ -21,7 +23,18 @@ const ProductContent: React.FC<any> = ({ product }) => {
               <h1>{product.name}</h1>
               <h2>${product.price}</h2>
               <div className="addto-baskte">
-                <Button variant="outlined"> Add to Baskte </Button>
+                <Button
+                  onClick={() =>
+                    AddToBasket(store, {
+                      name: product.name,
+                      price: product.price,
+                    })
+                  }
+                  variant="outlined"
+                >
+                  {" "}
+                  Add to Baskte{" "}
+                </Button>
                 <div className="items-left">
                   <p>
                     Items left {product.availableLeft}/{product.availableMax}
