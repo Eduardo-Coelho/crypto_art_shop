@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./shopping-cart.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { GetBasktetState } from "../../State/shopping-cart/actions";
 
-const ShoppingCart: React.FC = () => {
-  const [state, setstate] = useState(true);
-  const basket = GetBasktetState();
-
+const ShoppingCart: React.FC<any> = ({ toggle, setToggle, basket }) => {
   return (
     <>
       <span className="overlayer-shoppingCart">
@@ -16,8 +12,13 @@ const ShoppingCart: React.FC = () => {
         ) : (
           ""
         )}
-
-        <FontAwesomeIcon className="icon" icon={faShoppingCart} />
+        <FontAwesomeIcon
+          onClick={() => {
+            setToggle(!toggle);
+          }}
+          className="icon"
+          icon={faShoppingCart}
+        />
       </span>
     </>
   );

@@ -31,7 +31,7 @@ const Product: React.FC = () => {
     return () => {
       RestProductState(store);
     };
-  }, []);
+  }, [store, params]);
 
   return (
     <>

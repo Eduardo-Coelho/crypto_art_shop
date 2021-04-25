@@ -22,7 +22,7 @@ const Home: React.FC = () => {
     return () => {
       ResetHomeState(store);
     };
-  }, []);
+  }, [store]);
 
   return <>{!home.loading ? <Context home={home} /> : ""}</>;
 };

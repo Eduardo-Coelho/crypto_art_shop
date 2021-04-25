@@ -9,6 +9,8 @@
 
 .nav-item {
   float: right;
+  position: relative;
+  cursor: pointer;
 }
 
 a {
@@ -25,13 +27,8 @@ a {
   font-weight: bold;
 }
 
-// .nav-item:hover {
-//   background-color: #111;
-// }
-
 .nav-outlayer {
   z-index: 1;
-  position: relative;
   box-shadow: 0 11px 13px -9px #ccc;
 }
 
