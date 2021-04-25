@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import Carousel from "../../../../Shared/carousel/carousel";
+import Carousel, {
+  TypeEnumCarousel,
+} from "../../../../Shared/carousel/carousel";
 import Container from "@material-ui/core/Container";
 import "./featured.scss";
 import { Grid } from "@material-ui/core";
@@ -10,7 +12,10 @@ const FeaturedContent: React.FC<any> = ({ featuredArt }) => {
       <div>
         <Container className="featured-container" maxWidth="md">
           <h3 className="center-text"> Featured Art </h3>
-          <Carousel item={featuredArt} type={"FeaturedContent"} />
+          <Carousel
+            item={featuredArt}
+            type={TypeEnumCarousel.FeaturedContent}
+          />
           <Grid container direction="row">
             <Grid item xs={3}>
               <div className="text-item">

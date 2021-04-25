@@ -33,7 +33,11 @@ const Product: React.FC = () => {
     };
   }, []);
 
-  return <>{!product.loading ? <ProductContent /> : "Loading..."}</>;
+  return (
+    <>
+      {!product.loading ? <ProductContent product={product} /> : "Loading..."}
+    </>
+  );
 };
 
 export default Product;
