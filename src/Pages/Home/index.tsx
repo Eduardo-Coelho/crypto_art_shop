@@ -6,6 +6,7 @@ import {
   fetchHome,
   GetHomeState,
   ReceiveHomeAction,
+  ResetHomeState,
 } from "../../State/home/actions";
 import Context from "./components/Context/Context";
 
@@ -16,10 +17,11 @@ const Home: React.FC = () => {
   const store = useStore();
   const home = GetHomeState();
   useEffect(() => {
-    if (home.featuredArt && home.showCasing) {
-      return;
-    }
     fetchHomeData(store);
+
+    return () => {
+      ResetHomeState(store);
+    };
   }, []);
 
   return <>{!home.loading ? <Context home={home} /> : ""}</>;

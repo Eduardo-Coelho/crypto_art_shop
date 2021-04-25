@@ -6,6 +6,7 @@ import { ProductState } from './store';
 
 export const REQUEST_PRODUCT = 'request_product';
 export const RECEIVE_PRODUCT = 'receive_product';
+export const RESET_PRODUCT_STATE = 'reset_product_state';
 
 export interface Product {
   id: string;
@@ -38,9 +39,17 @@ export const receiveProduct = ( productSlug: string, payload: Product,): Receive
   productSlug,
 });
 
+export const resetProductState = (): {type:string} => ({
+  type: RESET_PRODUCT_STATE,
+});
+
+export const RestProductState = (store:any):void => {
+  store.dispatch(resetProductState());
+}
+
 export const GetProductState = ():ProductState => {
-  const { product } = useSelector((state: State) => state);
-  return product;
+ const { product } = useSelector((state: State) => state);
+return product;
 }
 
 

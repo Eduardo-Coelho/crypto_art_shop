@@ -1,9 +1,11 @@
 import { Button, Container, Grid, LinearProgress } from "@material-ui/core";
 import React from "react";
 import CarouselProduct from "../../../../Shared/carousel/carousel-product";
+import { GetProductState } from "../../../../State/product/actions";
 import "./product-content.scss";
 
-const ProductContent: React.FC<any> = ({ product }) => {
+const ProductContent: React.FC = () => {
+  const product = GetProductState();
   return (
     <>
       <div className="product-body">
@@ -36,3 +38,6 @@ const ProductContent: React.FC<any> = ({ product }) => {
 };
 
 export default ProductContent;
+function useEffect(arg0: () => () => void, arg1: undefined[]) {
+  throw new Error("Function not implemented.");
+}

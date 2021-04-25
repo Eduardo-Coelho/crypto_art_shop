@@ -6,6 +6,7 @@ import { HomeState } from './store';
 
 export const REQUEST_HOME = 'request_home';
 export const RECEIVE_HOME = 'receive_home';
+export const RESET_HOME_STATE = 'reset_home_state';
 
 
 export interface HomePayload {
@@ -42,6 +43,15 @@ export const receiveHome = (payload: HomePayload): ReceiveHomeAction => ({
   type: RECEIVE_HOME,
   payload,
 });
+
+export const  resetHomeState= (): {type:string} => ({
+  type: RESET_HOME_STATE,
+});
+
+
+export const ResetHomeState = (store:any) => {
+  store.dispatch(resetHomeState());
+}
 
 
 export const GetHomeState = (): HomeState => {
