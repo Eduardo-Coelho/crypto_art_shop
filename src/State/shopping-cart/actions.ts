@@ -1,6 +1,11 @@
+import { useSelector } from 'react-redux';
+import { State } from '../reducers';
+import { BasketState } from './store';
+
 export const ADD_BASKET = 'add_basket';
 export const UPDATE_BASKET = 'update_basket';
 export const REMOVE_BASKET = 'remove_basket';
+export const RESET_BASKET_STATE = 'reset_basket_state';
 
 
 export type BasketTypes = AddToBasketAction | UpdateBasketAction | RemoveBasketAction;
@@ -51,3 +56,21 @@ export const removeBasket = (payload: BasketPayload): RemoveBasketAction => ({
   type: UPDATE_BASKET,
   payload,
 });
+
+export const resetBasketState = (): {type:string} => ({
+  type: RESET_BASKET_STATE,
+});
+
+
+export const RestBasketState = (store:any): void => {
+  store.dispatch(resetBasketState());
+}
+
+export const GetBasktetState = (): BasketState => {
+ const { basket } = useSelector((state: State) => state);
+return basket;
+}
+
+export const AddToBasket = (store:any, payLoad: any) => {
+  store.dispatch(addToBasket(payLoad));
+}

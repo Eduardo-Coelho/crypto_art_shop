@@ -1,4 +1,4 @@
-import { ADD_BASKET, BasketTypes, REMOVE_BASKET, UPDATE_BASKET } from './actions';
+import { ADD_BASKET, BasketTypes, REMOVE_BASKET, RESET_BASKET_STATE, UPDATE_BASKET } from './actions';
 import { BasketState } from './store';
 
 
@@ -12,11 +12,9 @@ const basket = (state = DEFAULT_STATE, action: BasketTypes):BasketState => {
   switch (action.type) {
     case ADD_BASKET:
       return { ...action.payload };
-    case UPDATE_BASKET:
-      return { ...action.payload };
-
-    case REMOVE_BASKET:
-      return { ...action.payload };
+  
+    case RESET_BASKET_STATE:
+      return { items: [] };
 
     default:
       break;
