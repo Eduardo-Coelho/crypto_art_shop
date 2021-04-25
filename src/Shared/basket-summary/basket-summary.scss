@@ -1,0 +1,23 @@
+.basket-summary {
+  color: rgb(216, 91, 42);
+  position: absolute;
+  top: 135px;
+  right: 11px;
+  padding: 10px;
+  width: 300px;
+  height: 500px;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: solid 2px rgb(216, 91, 42);
+
+  li {
+    font-weight: bold;
+    font-size: 18px;
+    list-style: none;
+    background-color: rgb(235, 212, 175);
+    margin: 5px;
+    padding: 10px;
+  }
+}
