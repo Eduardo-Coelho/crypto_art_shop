@@ -26,6 +26,7 @@ const ProductContent: React.FC<any> = ({ product, store }) => {
                 <Button
                   onClick={() =>
                     AddToBasket(store, {
+                      id: product.id,
                       name: product.name,
                       price: product.price,
                     })
