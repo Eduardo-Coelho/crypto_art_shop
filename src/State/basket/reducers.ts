@@ -11,7 +11,6 @@ const basket = (state = DEFAULT_STATE, action: BasketTypes ):any => {
 
   switch (action.type) {
     case ADD_BASKET:
-
       return { items:[...state.items, action.payload] };
 
     case REMOVE_FROM_BASKET:
