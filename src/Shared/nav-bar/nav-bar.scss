@@ -14,7 +14,7 @@
 }
 
 a {
-  color: rgb(216, 91, 42);
+  color: rgb(168, 168, 168);
 }
 
 .nav-item {
@@ -23,7 +23,7 @@ a {
   padding: 14px 16px;
   font-size: 20px;
   text-decoration: none;
-  color: rgb(216, 91, 42);
+  color: rgb(168, 168, 168);
   font-weight: bold;
 }
 
@@ -43,4 +43,11 @@ a {
 .icon {
   font-size: 32px;
   margin: 13px 5px;
+  color: rgb(216, 91, 42);
+}
+
+.selected {
+  font-size: 32px;
+  margin: 13px 5px;
+  color: rgb(168, 168, 168);
 }

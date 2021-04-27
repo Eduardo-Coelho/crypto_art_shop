@@ -16,7 +16,7 @@ const FeaturedContent: React.FC<any> = ({ featuredArt }) => {
             item={featuredArt}
             type={TypeEnumCarousel.FeaturedContent}
           />
-          <Grid container direction="row">
+          {/* <Grid container direction="row">
             <Grid item xs={3}>
               <div className="text-item">
                 <h2>Test 1</h2>
@@ -62,7 +62,7 @@ const FeaturedContent: React.FC<any> = ({ featuredArt }) => {
                 </p>
               </div>
             </Grid>
-          </Grid>
+          </Grid> */}
         </Container>
       </div>
     </>

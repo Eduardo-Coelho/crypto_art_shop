@@ -16,7 +16,7 @@ const ShoppingCart: React.FC<any> = ({ toggle, setToggle, basket }) => {
           onClick={() => {
             setToggle(!toggle);
           }}
-          className="icon"
+          className={!toggle ? "icon" : "icon selected"}
           icon={faShoppingCart}
         />
       </span>
