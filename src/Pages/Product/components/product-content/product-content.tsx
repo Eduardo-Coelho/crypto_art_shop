@@ -4,7 +4,7 @@ import { useStore } from "react-redux";
 import Carousel, {
   TypeEnumCarousel,
 } from "../../../../Shared/carousel/carousel";
-import { AddToBasket } from "../../../../State/shopping-cart/actions";
+import { AddToBasket } from "../../../../State/basket/actions";
 import "./product-content.scss";
 
 const ProductContent: React.FC<any> = ({ product, store }) => {

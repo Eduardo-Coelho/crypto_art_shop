@@ -3,8 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import "./basket-summary.scss";
 import { Link } from "react-router-dom";
+import { RemoveFromBasket } from "../../State/basket/actions";
+import { useStore } from "react-redux";
 
 const BasketSummary: React.FC<any> = ({ basket }) => {
+  const store = useStore();
   return (
     <>
       <div className="basket-summary">
@@ -16,7 +19,13 @@ const BasketSummary: React.FC<any> = ({ basket }) => {
               </Link>
 
               <span>
-                <FontAwesomeIcon icon={faTimesCircle} />
+                <FontAwesomeIcon
+                  onClick={() => {
+                    RemoveFromBasket(store, item.id);
+                  }}
+                  icon={faTimesCircle}
+                  className="faTimesCircle"
+                />
               </span>
             </li>
           );

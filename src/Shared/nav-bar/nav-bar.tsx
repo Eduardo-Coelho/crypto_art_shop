@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import ShoppingCart from "../shopping-cart/shopping-cart";
 import BasketSummary from "../basket-summary/basket-summary";
-import { GetBasktetState } from "../../State/shopping-cart/actions";
+import { GetBasktetState } from "../../State/basket/actions";
 
 const NavBar: React.FC = () => {
   const [toggle, setToggle] = useState(false);

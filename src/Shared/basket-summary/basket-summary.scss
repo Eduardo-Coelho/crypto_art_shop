@@ -36,6 +36,11 @@
       top: 3px;
       font-size: 26px;
       padding: 5px;
+      cursor: pointer;
     }
+  }
+
+  .faTimesCircle:hover {
+    color: rgb(248, 149, 149);
   }
 }
