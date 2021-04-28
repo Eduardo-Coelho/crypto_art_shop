@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "./nav-bar.scss";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
 import ShoppingCart from "../shopping-cart/shopping-cart";
 import BasketSummary from "../basket-summary/basket-summary";
 import { GetBasktetState } from "../../State/basket/actions";
+import UserSigninModal from "../user-signin-modal/user-signin-modal";
 
 const NavBar: React.FC = () => {
   const [toggle, setToggle] = useState(false);
@@ -27,7 +26,7 @@ const NavBar: React.FC = () => {
             </li>
 
             <li className="nav-item noselect">
-              <FontAwesomeIcon className="icon" icon={faUser} />
+              <UserSigninModal />
             </li>
 
             <li className="nav-item noselect">
