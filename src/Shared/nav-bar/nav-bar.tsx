@@ -34,7 +34,9 @@ const NavBar: React.FC = () => {
             </li>
 
             <li className="nav-item noselect">
-              <p>Gallery</p>
+              <Link to={{ pathname: "/gallery" }}>
+                <p>Gallery</p>
+              </Link>
             </li>
 
             <li className="nav-item noselect">
