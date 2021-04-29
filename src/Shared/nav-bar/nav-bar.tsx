@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./nav-bar.scss";
 import { Link } from "react-router-dom";
-import ShoppingCart from "../shopping-cart/shopping-cart";
-import BasketSummary from "../basket-summary/basket-summary";
+import ShoppingCart from "./shopping-cart/shopping-cart";
+import BasketSummary from "./basket-summary/basket-summary";
 import { GetBasktetState } from "../../State/basket/actions";
-import UserSigninModal from "../user-signin-modal/user-signin-modal";
+import UserSigninModal from "./user-signin-modal/user-signin-modal";
 
 const NavBar: React.FC = () => {
   const [toggle, setToggle] = useState(false);

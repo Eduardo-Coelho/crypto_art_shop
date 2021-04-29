@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import "./basket-summary.scss";
 import { Link } from "react-router-dom";
-import { RemoveFromBasket } from "../../State/basket/actions";
+import { RemoveFromBasket } from "../../../State/basket/actions";
 import { useStore } from "react-redux";
 
 const BasketSummary: React.FC<any> = ({ basket }) => {
