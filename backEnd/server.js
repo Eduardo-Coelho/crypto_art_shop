@@ -23,6 +23,24 @@ app.get("/home", getHome);
 
 /**
  *
+ * @description Get Gallery page data
+ *
+ */
+
+const getGallery = async (req, res) => {
+  try {
+    const file = await require(`./data/gallery/gallery.json`);
+    return res.json(file);
+  } catch (error) {
+    console.error(error);
+    res.status(500);
+  }
+};
+
+app.get("/gallery", getGallery);
+
+/**
+ *
  * @description Get the Product
  *
  */
