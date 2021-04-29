@@ -65,11 +65,13 @@ const Carousel: React.FC<Props> = ({ item, type }) => {
             className="gallary-layer-FeaturedContent"
           >
             <div className="hovered-layer"></div>
-            <img
-              className="gallary-item-FeaturedContent disableselect disabledrag"
-              src={i.cdn}
-              alt=""
-            />
+            <Link to={{ pathname: `/product/${i.id}` }}>
+              <img
+                className="gallary-item-FeaturedContent disableselect disabledrag"
+                src={i.cdn}
+                alt=""
+              />
+            </Link>
           </div>
         );
       });
