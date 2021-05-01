@@ -5,17 +5,33 @@ import "./basket-summary.scss";
 import { Link } from "react-router-dom";
 import { RemoveFromBasket } from "../../../State/basket/actions";
 import { useStore } from "react-redux";
+import { BasketState } from "../../../State/basket/store";
+import { GBPFormatter } from "../../helper-functions";
 
-const BasketSummary: React.FC<any> = ({ basket }) => {
+const BasketSummary: React.FC<any> = ({ setToggle, basket }) => {
   const store = useStore();
+
+  const subItems = (basket: BasketState) => {
+    const totalItemsSum = basket.items.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue.price;
+    }, 0);
+    return GBPFormatter.format(totalItemsSum);
+  };
+
   return (
     <>
-      <div className="basket-summary">
+      <div
+        onMouseLeave={() => {
+          setToggle(false);
+        }}
+        className="basket-summary"
+      >
         {basket.items.map((item: any, index: number) => {
           return (
             <li key={`basket-item${index}`}>
               <Link to={{ pathname: `/product/${item.id}` }}>
-                {item.name.substring(0, 17)} <b> ${item.price}</b>
+                <b> {GBPFormatter.format(item.price)}</b>
+                {item.name.substring(0, 19)}
               </Link>
 
               <span>
@@ -30,6 +46,9 @@ const BasketSummary: React.FC<any> = ({ basket }) => {
             </li>
           );
         })}
+        <div className="sub-basket">
+          <h1> {subItems(basket)} </h1>
+        </div>
       </div>
     </>
   );

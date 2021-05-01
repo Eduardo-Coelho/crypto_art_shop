@@ -47,7 +47,7 @@ const NavBar: React.FC = () => {
           </ul>
         </div>
       </nav>
-      {toggle ? <BasketSummary basket={basket} /> : ""}
+      {toggle ? <BasketSummary setToggle={setToggle} basket={basket} /> : ""}
     </>
   );
 };

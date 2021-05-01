@@ -3,6 +3,7 @@ import React from "react";
 import Carousel, {
   TypeEnumCarousel,
 } from "../../../../Shared/carousel/carousel";
+import { GBPFormatter } from "../../../../Shared/helper-functions";
 import { AddToBasket, GetBasktetState } from "../../../../State/basket/actions";
 import "./product-content.scss";
 
@@ -21,7 +22,7 @@ const ProductContent: React.FC<any> = ({ product, store }) => {
             </Grid>
             <Grid className="text-center" item md={3}>
               <h1>{product.name}</h1>
-              <h2>${product.price}</h2>
+              <h2>{GBPFormatter.format(product.price)}</h2>
               <div className="addto-baskte">
                 <Button
                   disabled={
