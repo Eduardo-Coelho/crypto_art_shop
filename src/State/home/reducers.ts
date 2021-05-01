@@ -20,10 +20,10 @@ const home = (state = DEFAULT_STATE, action: ReceiveHomeAction):HomeState => {
         showCasing: null,
       };
     default:
-      break;
+  return state;
   }
 
-  return state;
+ 
 }
 
 export default home;

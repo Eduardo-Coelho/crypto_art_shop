@@ -33,9 +33,8 @@ const product = (state = DEFAULT_STATE, action: ReceiveProductAction ):ProductSt
       };
 
     default:
-      break;
+    return state;
   }
-  return state;
 }
 
 export default product;

@@ -21,9 +21,8 @@ const basket = (state = DEFAULT_STATE, action: BasketTypes ):any => {
       return { items: [] };
 
     default:
-      break;
+      return state;
   }
-  return state;
 }
 
 export default basket;

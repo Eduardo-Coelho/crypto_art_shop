@@ -21,10 +21,9 @@ const gallery = (state = DEFAULT_STATE, action: GalleryState):any => {
         contents: []
       };
     default:
-      break;
+      return state;
   }
 
-  return state;
 }
 
 export default gallery;
