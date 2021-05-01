@@ -8,7 +8,6 @@ export const REQUEST_GALLERY = 'request_gallery';
 export const RECEIVE_GALLERY = 'receive_gallery';
 export const RESET_GALLERY_STATE = 'reset_gallery_state';
 
-
 export interface GalleryPayload {
   contents: Contents[];
 }
@@ -27,7 +26,7 @@ export interface RequestGalleryAction {
 export interface ReceiveGalleryAction {
   type: string;
   gallerySlug: string;
-  payload: GalleryPayload;
+  payload?: GalleryPayload;
 }
 
 export const requestGallery = (gallerySlug:string): RequestGalleryAction => ({
