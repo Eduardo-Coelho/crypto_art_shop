@@ -9,6 +9,7 @@ import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
+import { Contents } from "../../../../State/gallery/actions";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -17,7 +18,8 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: "10px",
     },
     media: {
-      height: 100,
+      height: 250,
+
       paddingTop: "56.25%", // 16:9
     },
     avatar: {
@@ -26,35 +28,44 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const GalleryCard: React.FC<any> = ({ item }) => {
+interface Props {
+  item: Contents;
+}
+
+const GalleryCard: React.FC<Props> = ({ item }) => {
   const classes = useStyles();
-  console.log("item -> ", typeof item.cdn);
 
   return (
-    <Card className={classes.root}>
-      <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            {item.name.substring(0, 2)}
-          </Avatar>
-        }
-        title={item.name.substring(0, 19)}
-        subheader="September 14, 2016"
-      />
-      <CardMedia
-        className={classes.media}
-        image={item.cdn}
-        title="Paella dish"
-      />
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-      </CardActions>
-    </Card>
+    <>
+      {item.id !== "N/A" ? (
+        <Card className={classes.root}>
+          <CardHeader
+            avatar={
+              <Avatar aria-label="recipe" className={classes.avatar}>
+                {item.crypto.substring(0, 2)}
+              </Avatar>
+            }
+            title={item.name.substring(0, 19)}
+            subheader={item.date}
+          />
+          <CardMedia
+            className={classes.media}
+            image={item.cdn}
+            title={item.name}
+          />
+          <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+            <IconButton aria-label="share">
+              <ShareIcon />
+            </IconButton>
+          </CardActions>
+        </Card>
+      ) : (
+        ""
+      )}
+    </>
   );
 };
 
