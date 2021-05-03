@@ -84,7 +84,7 @@ const UserSigninModal: React.FC = () => {
       >
         <Fade in={state.modalToggle}>
           <div className={classes.paper}>
-            <Grid direction="column">
+            <Grid container direction="column">
               <Grid item sm={10}>
                 <FormControl className={classes.margin}>
                   <InputLabel htmlFor="standard-adornment-Email">

@@ -44,9 +44,9 @@ const Gallery: React.FC = () => {
           <Grid item md={6}>
             {!gallery.loading ? (
               <Grid container direction="row">
-                {gallery.contents.map((item: Contents) => {
+                {gallery.contents.map((item: Contents, index: number) => {
                   return (
-                    <Grid item xs={4}>
+                    <Grid key={`${item.id}-${index}`} item xs={4}>
                       <GalleryCard item={item} />
                     </Grid>
                   );
