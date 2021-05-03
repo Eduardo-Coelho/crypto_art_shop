@@ -16,6 +16,8 @@ export interface Contents {
   id: string,
   name: string;
   cdn: string;
+  date: string;
+  crypto: string;
 }
 
 export interface RequestGalleryAction {
@@ -54,6 +56,38 @@ export const GetGalleryState = (): GalleryState => {
   const { gallery } = useSelector((state: State) => state);
   return gallery;
 }
+
+
+export const PrepForPagination = (): {result: {}, divideIterations:number} => {
+  const { gallery } = useSelector((state: State) => state);
+  if(gallery.contents.length === 0) return {result:{}, divideIterations:0};
+  const maxPerPage = 6;
+  const divideIterations = Math.floor(gallery.contents.length / maxPerPage);
+
+  /**
+   * @tudo refactor the below 
+   */
+
+  let currantIndex = 0;
+  let result:any = {}
+
+  for(let a = 1; a <= divideIterations + 1; a++){
+    result = {...result, [a]:[]}
+  }
+
+  for(let b = 1; b <= divideIterations + 1; b++){
+    for(let c = 1; c <= 6; c++){
+      result[b].push(gallery.contents[currantIndex] || {
+        id: "N/A"
+      });
+      currantIndex++;
+    }
+  }
+  debugger;
+  return { result, divideIterations };
+}
+
+
 
   export const fetchGallery = (gallerySlug:string): any => async (
     dispatch: any,

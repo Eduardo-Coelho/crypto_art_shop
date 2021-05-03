@@ -4,121 +4,161 @@
                      "id": "Bobby",
                      "name": "Bobby",
                      "price": 49.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-Detail.jpg"
+                     "date": "2021-05-03 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-Detail.jpg",
+                     "crypto": "Bitcoin"
               },
               {
                      "id": "CryptoNouveau",
                      "name": "Crypto Nouveau BxZ",
                      "price": 49.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2020/05/TheTinkerer-book-scaled.jpg"
+                     "date": "2020-04-03 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2020/05/TheTinkerer-book-scaled.jpg",
+                     "crypto": "Bitcoin"
               },
               {
                      "id": "Soldier",
                      "name": "Soldier",
                      "price": 99.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Soldier-small-book.jpg"
+                     "date": "2000-04-03 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Soldier-small-book.jpg",
+                     "crypto": "Bitcoin Cash"
               },
               {
                      "id": "TheHalving",
                      "name": "Bitcoin – The Halving",
                      "price": 549.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2015/11/halving-book.jpg"
+                     "date": "2001-04-03 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2015/11/halving-book.jpg",
+                     "crypto": "Bitcoin Cash"
               },
               {
                      "id": "BlackSwan",
                      "name": "Bitcoin Cash – Core’s Black Swan",
                      "price": 99.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCash-book.jpg"
+                     "date": "2021-05-03 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCash-book.jpg",
+                     "crypto": "Bitcoin Cash"
               },
               {
                      "id": "Bobby",
                      "name": "Bobby",
                      "price": 49.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-Detail.jpg"
+                     "date": "2021-05-03 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-Detail.jpg",
+                     "crypto": "DASH"
               },
               {
                      "id": "CryptoNouveau",
                      "name": "Crypto Nouveau BxZ",
                      "price": 49.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2020/05/TheTinkerer-book-scaled.jpg"
+                     "date": "2021-05-03 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2020/05/TheTinkerer-book-scaled.jpg",
+                     "crypto": "DASH"
               },
               {
                      "id": "Soldier",
                      "name": "Soldier",
                      "price": 99.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Soldier-small-book.jpg"
+                     "date": "2020-05-03 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Soldier-small-book.jpg",
+                     "crypto": "DASH"
+              },
+              {
+                     "id": "TheHalving",
+                     "name": "Bitcoin – The Halving",
+                     "price": 749.95,
+                     "date": "2020-01-03 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2015/11/halving-book.jpg",
+                     "crypto": "DASH"
+              },
+              {
+                     "id": "BlackSwan",
+                     "name": "Bitcoin Cash – Core’s Black Swan",
+                     "price": 1000,
+                     "date": "2020-05-10 10:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCash-book.jpg",
+                     "crypto": "Dogecoin"
+              },
+              {
+                     "id": "Bobby",
+                     "name": "Bobby",
+                     "price": 1200,
+                     "date": "2020-01-01 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-Detail.jpg",
+                     "crypto": "Dogecoin"
+              },
+              {
+                     "id": "CryptoNouveau",
+                     "name": "Crypto Nouveau BxZ",
+                     "price": 49.95,
+                     "date": "2021-05-03 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2020/05/TheTinkerer-book-scaled.jpg",
+                     "crypto": "Dogecoin"
+              },
+              {
+                     "id": "Soldier",
+                     "name": "Soldier",
+                     "price": 99.95,
+                     "date": "2020-01-01 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Soldier-small-book.jpg",
+                     "crypto": "Dogecoin"
               },
               {
                      "id": "TheHalving",
                      "name": "Bitcoin – The Halving",
                      "price": 549.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2015/11/halving-book.jpg"
+                     "date": "2020-01-01 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2015/11/halving-book.jpg",
+                     "crypto": "Litecoin"
               },
               {
                      "id": "BlackSwan",
                      "name": "Bitcoin Cash – Core’s Black Swan",
                      "price": 99.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCash-book.jpg"
+                     "date": "2021-01-01 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCash-book.jpg",
+                     "crypto": "Litecoin"
               },
               {
                      "id": "Bobby",
                      "name": "Bobby",
                      "price": 49.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-Detail.jpg"
+                     "date": "2020-01-01 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-Detail.jpg",
+                     "crypto": "Litecoin"
               },
               {
                      "id": "CryptoNouveau",
                      "name": "Crypto Nouveau BxZ",
                      "price": 49.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2020/05/TheTinkerer-book-scaled.jpg"
+                     "date": "2020-01-01 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2020/05/TheTinkerer-book-scaled.jpg",
+                     "crypto": "Bitcoin"
               },
               {
                      "id": "Soldier",
                      "name": "Soldier",
                      "price": 99.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Soldier-small-book.jpg"
+                     "date": "2020-01-01 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Soldier-small-book.jpg",
+                     "crypto": "Bitcoin"
               },
               {
                      "id": "TheHalving",
                      "name": "Bitcoin – The Halving",
                      "price": 549.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2015/11/halving-book.jpg"
+                     "date": "2020-01-01 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2015/11/halving-book.jpg",
+                     "crypto": "Bitcoin"
               },
               {
                      "id": "BlackSwan",
                      "name": "Bitcoin Cash – Core’s Black Swan",
                      "price": 99.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCash-book.jpg"
-              },
-              {
-                     "id": "Bobby",
-                     "name": "Bobby",
-                     "price": 49.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Bobby-Detail.jpg"
-              },
-              {
-                     "id": "CryptoNouveau",
-                     "name": "Crypto Nouveau BxZ",
-                     "price": 49.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2020/05/TheTinkerer-book-scaled.jpg"
-              },
-              {
-                     "id": "Soldier",
-                     "name": "Soldier",
-                     "price": 99.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2014/04/Bitcoin-Art-Soldier-small-book.jpg"
-              },
-              {
-                     "id": "TheHalving",
-                     "name": "Bitcoin – The Halving",
-                     "price": 549.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2015/11/halving-book.jpg"
-              },
-              {
-                     "id": "BlackSwan",
-                     "name": "Bitcoin Cash – Core’s Black Swan",
-                     "price": 99.95,
-                     "cdn": "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCash-book.jpg"
+                     "date": "2020-01-01 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCash-book.jpg",
+                     "crypto": "Bitcoin"
               }
        ]
 }
