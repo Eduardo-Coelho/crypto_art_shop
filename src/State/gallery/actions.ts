@@ -83,7 +83,7 @@ export const PrepForPagination = (): {result: {}, divideIterations:number} => {
       currantIndex++;
     }
   }
-  debugger;
+
   return { result, divideIterations };
 }
 
