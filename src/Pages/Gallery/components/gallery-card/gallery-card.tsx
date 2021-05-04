@@ -37,34 +37,30 @@ const GalleryCard: React.FC<Props> = ({ item }) => {
 
   return (
     <>
-      {item.id !== "N/A" ? (
-        <Card className={classes.root}>
-          <CardHeader
-            avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                {item.crypto.substring(0, 2)}
-              </Avatar>
-            }
-            title={item.name.substring(0, 19)}
-            subheader={item.date}
-          />
-          <CardMedia
-            className={classes.media}
-            image={item.cdn}
-            title={item.name}
-          />
-          <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
-          </CardActions>
-        </Card>
-      ) : (
-        ""
-      )}
+      <Card className={classes.root}>
+        <CardHeader
+          avatar={
+            <Avatar aria-label="recipe" className={classes.avatar}>
+              {item.crypto.substring(0, 2)}
+            </Avatar>
+          }
+          title={item.name.substring(0, 19)}
+          subheader={item.date}
+        />
+        <CardMedia
+          className={classes.media}
+          image={item.cdn}
+          title={item.name}
+        />
+        <CardActions disableSpacing>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
+          <IconButton aria-label="share">
+            <ShareIcon />
+          </IconButton>
+        </CardActions>
+      </Card>
     </>
   );
 };

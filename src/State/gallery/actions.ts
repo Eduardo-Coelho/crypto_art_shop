@@ -58,33 +58,25 @@ export const GetGalleryState = (): GalleryState => {
 }
 
 
-export const PrepForPagination = (): {result: {}, divideIterations:number} => {
+export const PrepForPagination = (): {result: {}, pages:number} => {
   const { gallery } = useSelector((state: State) => state);
-  if(gallery.contents.length === 0) return {result:{}, divideIterations:0};
+  if(gallery.contents.length === 0) return {result:{}, pages:0};
+ 
   const maxPerPage = 6;
-  const divideIterations = Math.floor(gallery.contents.length / maxPerPage);
-
-  /**
-   * @tudo refactor the below 
-   */
+  const pages = Math.floor(gallery.contents.length / maxPerPage);
 
   let currantIndex = 0;
-  let result:any = {}
+  let result:any;
 
-  for(let a = 1; a <= divideIterations + 1; a++){
-    result = {...result, [a]:[]}
-  }
-
-  for(let b = 1; b <= divideIterations + 1; b++){
+  for(let b = 1; b <= pages + 1; b++){
+     result = {...result, [b]:[]};
     for(let c = 1; c <= 6; c++){
-      result[b].push(gallery.contents[currantIndex] || {
-        id: "N/A"
-      });
+      if(!gallery.contents[currantIndex]) break;
+      result[b].push(gallery.contents[currantIndex]);
       currantIndex++;
     }
   }
-
-  return { result, divideIterations };
+  return { result, pages };
 }
 
 

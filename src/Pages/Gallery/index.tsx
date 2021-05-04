@@ -9,7 +9,7 @@ import {
   ReceiveGalleryAction,
   ResetGalleryState,
 } from "../../State/gallery/actions";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import GalleryCard from "./components/gallery-card/gallery-card";
 import Pagination from "@material-ui/lab/Pagination";
 
@@ -26,7 +26,10 @@ const fetchGalleryData = (
 const Gallery: React.FC = () => {
   const store = useStore();
   const params = useParams() as RouteParams;
-  const gallery: any = PrepForPagination();
+  const gallery: {
+    result: any;
+    pages: number;
+  } = PrepForPagination();
 
   const [page, setPage] = useState(1);
 
@@ -47,7 +50,7 @@ const Gallery: React.FC = () => {
       <div>
         <Grid container direction="row" justify="center" alignItems="center">
           <Grid item md={6}>
-            {gallery.divideIterations ? (
+            {gallery.pages ? (
               <Grid container direction="row">
                 {gallery.result[page].map((item: Contents, index: number) => {
                   return (
@@ -57,7 +60,7 @@ const Gallery: React.FC = () => {
                   );
                 })}
                 <Pagination
-                  count={gallery.divideIterations + 1}
+                  count={gallery.pages + 1}
                   page={page}
                   onChange={handleChange}
                 />

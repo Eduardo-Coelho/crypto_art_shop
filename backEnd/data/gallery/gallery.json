@@ -159,6 +159,14 @@
                      "date": "2020-01-01 18:01:23.653",
                      "cdn": "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCash-book.jpg",
                      "crypto": "Bitcoin"
+              },
+              {
+                     "id": "BlackSwan",
+                     "name": "Bitcoin Cash – Core’s Black Swan",
+                     "price": 99.95,
+                     "date": "2020-01-01 18:01:23.653",
+                     "cdn": "https://cryptoart.com/wp-content/uploads/2019/11/BitcoinCash-book.jpg",
+                     "crypto": "Bitcoin"
               }
        ]
 }
