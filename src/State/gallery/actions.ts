@@ -70,7 +70,7 @@ export const PrepForPagination = (): {result: {}, pages:number} => {
 
   for(let b = 1; b <= pages + 1; b++){
      result = {...result, [b]:[]};
-    for(let c = 1; c <= 6; c++){
+    for(let c = 1; c <= maxPerPage; c++){
       if(!gallery.contents[currantIndex]) break;
       result[b].push(gallery.contents[currantIndex]);
       currantIndex++;
@@ -78,8 +78,6 @@ export const PrepForPagination = (): {result: {}, pages:number} => {
   }
   return { result, pages };
 }
-
-
 
   export const fetchGallery = (gallerySlug:string): any => async (
     dispatch: any,
