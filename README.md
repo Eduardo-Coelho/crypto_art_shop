@@ -23,9 +23,9 @@ Gallery
 
 ## Images
 
-![Image of Home](./Project-IMGs/Part1.png)
+![Image of Home](./Project-IMGs/Part1.gif)
 
-![Image of Home](./Project-IMGs/Part2.png)
+![Image of Home](./Project-IMGs/Part2.gif)
 
 ## Available Scripts
 
