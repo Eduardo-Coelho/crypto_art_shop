@@ -1,5 +1,6 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
+import { useStore } from "react-redux";
 
 import { Link } from "react-router-dom";
 import { Contents } from "../../State/home/actions";

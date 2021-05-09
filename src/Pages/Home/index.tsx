@@ -24,7 +24,11 @@ const Home: React.FC = () => {
     };
   }, [store]);
 
-  return <>{!home.loading ? <Context home={home} /> : ""}</>;
+  return (
+    <>
+      <Context home={home} />
+    </>
+  );
 };
 
 export default Home;

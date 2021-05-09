@@ -4,7 +4,6 @@ import ENDPOINT_URL from '../../ENDPOINT_URL';
 import { State } from '../reducers';
 import { ProductState } from './store';
 
-export const REQUEST_PRODUCT = 'request_product';
 export const RECEIVE_PRODUCT = 'receive_product';
 export const RESET_PRODUCT_STATE = 'reset_product_state';
 
@@ -28,18 +27,14 @@ export interface ReceiveProductAction {
   productSlug: string;
 }
 
-export const requestProduct = (productSlug:string): RequestProductAction => ({
-  type: REQUEST_PRODUCT,
-  productSlug,
-});
 
-export const receiveProduct = ( productSlug: string, payload: Product,): ReceiveProductAction => ({
+ const receiveProduct = ( productSlug: string, payload: Product,): ReceiveProductAction => ({
   type: RECEIVE_PRODUCT,
   payload,
   productSlug,
 });
 
-export const resetProductState = (): {type:string} => ({
+ const resetProductState = (): {type:string} => ({
   type: RESET_PRODUCT_STATE,
 });
 
@@ -56,8 +51,7 @@ return product;
 export const fetchProduct = (productSlug: string): any => async (
   dispatch: any,
 ): Promise<ReceiveProductAction | string> => {
-  dispatch(requestProduct(productSlug));
-
+ 
   try {
     const { data } = await axios.get(`${ENDPOINT_URL.Product}${productSlug}`);
     return dispatch(receiveProduct(productSlug, data));

@@ -1,5 +1,5 @@
 export interface HomeState {
-  loading: boolean;
+  loading?: boolean;
   featuredArt:any;
   showCasing: any;
 }

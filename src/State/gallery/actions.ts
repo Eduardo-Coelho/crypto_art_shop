@@ -31,18 +31,18 @@ export interface ReceiveGalleryAction {
   payload?: GalleryPayload;
 }
 
-export const requestGallery = (gallerySlug:string): RequestGalleryAction => ({
+ const requestGallery = (gallerySlug:string): RequestGalleryAction => ({
   type: REQUEST_GALLERY,
   gallerySlug,
 });
 
-export const receiveGallery = (gallerySlug:string, payload: GalleryPayload): ReceiveGalleryAction => ({
+ const receiveGallery = (gallerySlug:string, payload: GalleryPayload): ReceiveGalleryAction => ({
   type: RECEIVE_GALLERY,
   gallerySlug,
   payload,
 });
 
-export const  resetGalleryState= (): {type:string} => ({
+ const  resetGalleryState= (): {type:string} => ({
   type: RESET_GALLERY_STATE,
 });
 

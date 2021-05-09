@@ -1,12 +1,23 @@
 import React from "react";
+import { HomeState } from "../../../../State/home/store";
 import FeaturedContent from "../featured/featured";
 import HeadLine from "../head-line/head-line";
 
-const Context: React.FC<any> = ({ home }) => {
+interface Props {
+  home: HomeState;
+}
+
+const Context: React.FC<Props> = ({ home }) => {
   return (
     <>
-      <HeadLine showCasing={home.showCasing} />
-      <FeaturedContent featuredArt={home.featuredArt} />
+      {!home.loading ? (
+        <>
+          <HeadLine showCasing={home.showCasing} />
+          <FeaturedContent featuredArt={home.featuredArt} />
+        </>
+      ) : (
+        ""
+      )}
     </>
   );
 };
