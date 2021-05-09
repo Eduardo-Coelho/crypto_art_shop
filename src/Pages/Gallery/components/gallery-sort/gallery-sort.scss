@@ -1,0 +1,36 @@
+@import "../../../../Shared/color.scss";
+
+.sort-container {
+  display: "flex";
+  text-align: center;
+  color: rgb(102, 102, 102);
+  box-shadow: 0 11px 13px -9px #ccc;
+  height: 20%;
+  margin: 5px;
+  font-weight: bold;
+  border-top: 3px solid $brand;
+
+  .formcontrol {
+    margin: 50px;
+  }
+
+  .MuiCheckbox-colorSecondary.Mui-checked {
+    color: $brand;
+  }
+
+  .MuiCheckbox-root {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  .MuiIconButton-colorSecondary {
+    color: #ccc;
+  }
+
+  .sort-container .MuiIconButton-colorSecondary {
+    color: $soft-gray;
+  }
+  .MuiAppBar-colorPrimary {
+    color: #fff;
+    font-weight: bold;
+    background-color: $brand;
+  }
+}
