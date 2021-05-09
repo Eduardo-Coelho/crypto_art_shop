@@ -12,6 +12,8 @@ import {
 import { Grid } from "@material-ui/core";
 import GalleryCard from "./components/gallery-card/gallery-card";
 import Pagination from "@material-ui/lab/Pagination";
+import GallerySort from "./components/gallery-sort/gallery-sort";
+import GallerySearch from "./components/gallery-search/gallery-search";
 
 interface RouteParams {
   gallerySlug: string;
@@ -47,30 +49,44 @@ const Gallery: React.FC = () => {
 
   return (
     <>
-      <div>
-        <Grid container direction="row" justify="center" alignItems="center">
+      <div className="margin-top-5">
+        <Grid container direction="row" justify="center" alignItems="stretch">
           <Grid item md={6}>
             {gallery.pages ? (
-              <Grid container direction="row">
-                {gallery.result[page].map((item: Contents, index: number) => {
-                  return (
-                    <Grid key={`${item.id}-${index}`} item xs={4}>
-                      <GalleryCard item={item} />
-                    </Grid>
-                  );
-                })}
-                <Pagination
-                  count={gallery.pages + 1}
-                  page={page}
-                  onChange={handleChange}
-                />
+              <Grid
+                container
+                direction="column-reverse"
+                justify="space-evenly"
+                alignItems="center"
+              >
+                <Grid className="margin-top-1" item xs={4}>
+                  <Pagination
+                    count={gallery.pages + 1}
+                    page={page}
+                    onChange={handleChange}
+                  />
+                </Grid>
+
+                <Grid container direction="row" alignItems="center">
+                  {gallery.result[page].map((item: Contents, index: number) => {
+                    return (
+                      <Grid key={`${item.id}-${index}`} item xs={4}>
+                        <GalleryCard item={item} />
+                      </Grid>
+                    );
+                  })}
+                </Grid>
+
+                <Grid className="margin-top-1" item xs>
+                  <GallerySearch />
+                </Grid>
               </Grid>
             ) : (
               "loading..."
             )}
           </Grid>
-          <Grid item md={3}>
-            <h1>test2</h1>
+          <Grid item xs={2}>
+            <GallerySort />
           </Grid>
         </Grid>
       </div>
