@@ -23,8 +23,9 @@ const useStyles = makeStyles((theme: Theme) =>
     search: {
       color: "#fff",
       fontWeight: "bold",
+      borderRadius: "20px",
       position: "relative",
-      borderRadius: theme.shape.borderRadius,
+
       backgroundColor: fade("rgb(216, 91, 42)", 5.0),
       "&:hover": {
         backgroundColor: fade("rgb(216, 91, 42)", 0.55),
@@ -53,9 +54,10 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(1, 1, 1, 0),
       paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
       transition: theme.transitions.create("width"),
+
       width: "100%",
       [theme.breakpoints.up("sm")]: {
-        width: "50vh",
+        width: "10vh",
         "&:focus": {
           width: "70vh",
         },
