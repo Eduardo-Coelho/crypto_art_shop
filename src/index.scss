@@ -3,6 +3,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.margin-top-1 {
+  padding-top: 10px;
+}
+.margin-top-5 {
+  padding-top: 50px;
+}
+.margin-top-10 {
+  padding-top: 100px;
+}
+
+.margin-box-1 {
+  margin: 10px;
+}
+.margin-box-5 {
+  margin: 50px;
+}
+.margin-box-10 {
+  margin: 100px;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -54,16 +86,4 @@ a:active {
   cursor: grabbing;
   cursor: -moz-grabbing;
   cursor: -webkit-grabbing;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
 }
