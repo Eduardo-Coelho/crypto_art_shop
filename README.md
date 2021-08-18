@@ -1,6 +1,6 @@
 # Cryto Art Shop
 
-I am currently developing a full stack ecommerce application, inspired by crypto art.
+Rcommerce application, inspired by crypto art.
 
 ## tech
 
@@ -25,7 +25,6 @@ Gallery
 
 ![Image of Home](./Project-IMGs/Part1.gif)
 
-![Image of Home](./Project-IMGs/Part2.gif)
 
 ## Available Scripts
 
