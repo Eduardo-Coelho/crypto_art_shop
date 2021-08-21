@@ -7,7 +7,7 @@ import {
   GetHomeState,
   ReceiveHomeAction,
   ResetHomeState,
-} from "../../State/home/actions";
+} from "../../state/home-state/actions";
 import Context from "./components/Context/Context";
 
 const fetchHomeData = (store: Store): Promise<ReceiveHomeAction> =>

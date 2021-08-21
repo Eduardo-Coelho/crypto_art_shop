@@ -1,7 +1,7 @@
-import Gallery from "./Pages/Gallery";
-import Home from "./Pages/Home";
-import NotFound from "./Pages/NotFound";
-import Product from "./Pages/Product";
+import Gallery from "./pages/gallery";
+import Home from "./pages/home";
+import NotFound from "./pages/not-found";
+import Product from "./pages/product";
 
 export default [
   {

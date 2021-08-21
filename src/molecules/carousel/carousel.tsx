@@ -3,7 +3,7 @@ import AliceCarousel from "react-alice-carousel";
 import { useStore } from "react-redux";
 
 import { Link } from "react-router-dom";
-import { Contents } from "../../State/home/actions";
+import { Contents } from "../../state/home-state/actions";
 import "./carousel.scss";
 
 interface Props {

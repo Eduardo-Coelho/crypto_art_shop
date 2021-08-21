@@ -1,16 +1,16 @@
 import { combineReducers } from 'redux';
 
-import home from './home/reducers';
-import { HomeState }  from './home/store'; 
+import home from './home-state/reducers';
+import { HomeState }  from './home-state/store'; 
 
-import product from './product/reducers';
-import { ProductState } from './product/store';
+import product from './product-state/reducers';
+import { ProductState } from './product-state/store';
 
-import basket from './basket/reducers';
-import { BasketState } from './basket/store';
+import basket from './basket-state/reducers';
+import { BasketState } from './basket-state/store';
 
-import gallery  from './gallery/reducers';
-import { GalleryState } from './gallery/store';
+import gallery  from './gallery-state/reducers';
+import { GalleryState } from './gallery-state/store';
 
 export interface State {
     home: HomeState;

@@ -3,7 +3,7 @@ import "./nav-bar.scss";
 import { Link } from "react-router-dom";
 import ShoppingCart from "./shopping-cart/shopping-cart";
 import BasketSummary from "./basket-summary/basket-summary";
-import { GetBasktetState } from "../../State/basket/actions";
+import { GetBasktetState } from "../../state/basket-state/actions";
 import UserSigninModal from "./user-signin-modal/user-signin-modal";
 
 const NavBar: React.FC = () => {

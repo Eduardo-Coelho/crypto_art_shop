@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { Store } from "redux";
 
 import routes from "./Routes";
-import NavBar from "./Shared/nav-bar/nav-bar";
+import NavBar from "./molecules/nav-bar/nav-bar";
 
 interface AppProps {
   store: Store;

@@ -7,7 +7,7 @@ import {
   GetProductState,
   ReceiveProductAction,
   RestProductState,
-} from "../../State/product/actions";
+} from "../../state/product-state/actions";
 import { Store } from "redux";
 
 interface RouteParams {

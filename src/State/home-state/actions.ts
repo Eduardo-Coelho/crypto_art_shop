@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useSelector } from 'react-redux';
-import ENDPOINT_URL from '../../ENDPOINT_URL';
+import ENDPOINT_URL from '../../Interfaces/ENDPOINT_URL';
 import { State } from '../reducers';
 import { HomeState } from './store';
 

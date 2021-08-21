@@ -9,7 +9,7 @@ import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
-import { Contents } from "../../../../State/gallery/actions";
+import { Contents } from "../../../../state/gallery-state/actions";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

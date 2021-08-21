@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import "./basket-summary.scss";
 import { Link } from "react-router-dom";
-import { RemoveFromBasket } from "../../../State/basket/actions";
+import { RemoveFromBasket } from "../../../state/basket-state/actions";
 import { useStore } from "react-redux";
-import { BasketState } from "../../../State/basket/store";
+import { BasketState } from "../../../state/basket-state/store";
 import { GBPFormatter } from "../../helper-functions";
 
 const BasketSummary: React.FC<any> = ({ setToggle, basket }) => {

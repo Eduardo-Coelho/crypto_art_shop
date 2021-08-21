@@ -8,7 +8,7 @@ import {
   PrepForPagination,
   ReceiveGalleryAction,
   ResetGalleryState,
-} from "../../State/gallery/actions";
+} from "../../state/gallery-state/actions";
 import { Grid } from "@material-ui/core";
 import GalleryCard from "./components/gallery-card/gallery-card";
 import Pagination from "@material-ui/lab/Pagination";

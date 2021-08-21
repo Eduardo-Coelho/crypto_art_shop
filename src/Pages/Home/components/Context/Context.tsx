@@ -1,5 +1,5 @@
 import React from "react";
-import { HomeState } from "../../../../State/home/store";
+import { HomeState } from "../../../../state/home-state/store";
 import FeaturedContent from "../featured/featured";
 import HeadLine from "../head-line/head-line";
 

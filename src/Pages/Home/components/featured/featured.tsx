@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Carousel, {
   TypeEnumCarousel,
-} from "../../../../Shared/carousel/carousel";
+} from "../../../../molecules/carousel/carousel";
 import Container from "@material-ui/core/Container";
 import "./featured.scss";
 import { Grid } from "@material-ui/core";

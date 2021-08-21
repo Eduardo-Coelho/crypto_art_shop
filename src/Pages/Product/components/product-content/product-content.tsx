@@ -2,9 +2,9 @@ import { Button, Container, Grid, LinearProgress } from "@material-ui/core";
 import React from "react";
 import Carousel, {
   TypeEnumCarousel,
-} from "../../../../Shared/carousel/carousel";
-import { GBPFormatter } from "../../../../Shared/helper-functions";
-import { AddToBasket, GetBasktetState } from "../../../../State/basket/actions";
+} from "../../../../molecules/carousel/carousel";
+import { GBPFormatter } from "../../../../molecules/helper-functions";
+import { AddToBasket, GetBasktetState } from "../../../../state/basket-state/actions";
 import "./product-content.scss";
 
 const ProductContent: React.FC<any> = ({ product, store }) => {

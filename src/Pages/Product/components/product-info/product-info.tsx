@@ -2,8 +2,8 @@ import { Button, Container, Grid, LinearProgress } from "@material-ui/core";
 import React from "react";
 import Carousel, {
   TypeEnumCarousel,
-} from "../../../../Shared/carousel/carousel";
-import { AddToBasket, GetBasktetState } from "../../../../State/basket/actions";
+} from "../../../../molecules/carousel/carousel";
+import { AddToBasket, GetBasktetState } from "../../../../state/basket-state/actions";
 import "./product-content.scss";
 
 const productInfo: React.FC<any> = ({ product, store }) => {
