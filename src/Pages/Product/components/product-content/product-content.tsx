@@ -2,13 +2,13 @@ import { Button, Container, Grid, LinearProgress } from "@material-ui/core";
 import React from "react";
 import Carousel, {
   TypeEnumCarousel,
-} from "../../../../molecules/carousel/carousel";
-import { GBPFormatter } from "../../../../molecules/helper-functions";
-import { AddToBasket, GetBasktetState } from "../../../../state/basket-state/actions";
+} from "../../../../atoms/carousel/carousel";
+import { GBPFormatter } from "../../../../utility/helper";
+import { AddToBasket, GetBasktetState } from "../../../../state/cart-state/actions";
 import "./product-content.scss";
 
 const ProductContent: React.FC<any> = ({ product, store }) => {
-  const basket = GetBasktetState();
+  const cart = GetBasktetState();
   return (
     <>
       <div className="product-body">
@@ -26,7 +26,7 @@ const ProductContent: React.FC<any> = ({ product, store }) => {
               <div className="addto-baskte">
                 <Button
                   disabled={
-                    !!basket.items.find((item: any) => item.id === product.id)
+                    !!cart.items.find((item: any) => item.id === product.id)
                   }
                   onClick={() =>
                     AddToBasket(store, {

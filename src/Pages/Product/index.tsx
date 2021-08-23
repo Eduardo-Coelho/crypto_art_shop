@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { useStore } from "react-redux";
-import ProductContent from "./components/product-content/product-content";
+
 import {
   fetchProduct,
   GetProductState,
@@ -9,6 +9,7 @@ import {
   RestProductState,
 } from "../../state/product-state/actions";
 import { Store } from "redux";
+import ProductContent from "./components/product-content/product-content";
 
 interface RouteParams {
   productSlug: string;

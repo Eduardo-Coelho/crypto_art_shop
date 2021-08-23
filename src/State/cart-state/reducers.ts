@@ -7,7 +7,7 @@ const DEFAULT_STATE: BasketState = {
 
 };
 
-const basket = (state = DEFAULT_STATE, action: BasketTypes ):any => {
+const cart = (state = DEFAULT_STATE, action: BasketTypes ):any => {
 
   switch (action.type) {
     case ADD_BASKET:
@@ -25,4 +25,4 @@ const basket = (state = DEFAULT_STATE, action: BasketTypes ):any => {
   }
 }
 
-export default basket;
+export default cart;

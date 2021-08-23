@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel, {
   TypeEnumCarousel,
-} from "../../../../molecules/carousel/carousel";
+} from "../../../../atoms/carousel/carousel";
 
 const HeadLine: React.FC<any> = ({ showCasing }) => {
   return (

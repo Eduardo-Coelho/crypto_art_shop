@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "./nav-bar.scss";
 import { Link } from "react-router-dom";
-import ShoppingCart from "./shopping-cart/shopping-cart";
-import BasketSummary from "./basket-summary/basket-summary";
-import { GetBasktetState } from "../../state/basket-state/actions";
-import UserSigninModal from "./user-signin-modal/user-signin-modal";
+import ShoppingCart from "../../atoms/shopping-cart/shopping-cart";
+import BasketSummary from "../../atoms/cart/cart-summary";
+import { GetBasktetState } from "../../state/cart-state/actions";
+import UserSigninModal from "../../atoms/modal/modal";
+
 
 const NavBar: React.FC = () => {
   const [toggle, setToggle] = useState(false);
-  const basket = GetBasktetState();
+  const cart = GetBasktetState();
   return (
     <>
       <nav className="nav-outlayer">
@@ -21,7 +22,7 @@ const NavBar: React.FC = () => {
               <ShoppingCart
                 toggle={toggle}
                 setToggle={setToggle}
-                basket={basket}
+                cart={cart}
               />
             </li>
 
@@ -47,7 +48,7 @@ const NavBar: React.FC = () => {
           </ul>
         </div>
       </nav>
-      {toggle ? <BasketSummary setToggle={setToggle} basket={basket} /> : ""}
+      {toggle ? <BasketSummary setToggle={setToggle} cart={cart} /> : ""}
     </>
   );
 };

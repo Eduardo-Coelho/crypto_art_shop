@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import createStore from "./state/store";
-import "./index.scss";
+import "./assists/styles/index.scss";
 
 const appElement = document.getElementById("root");
 

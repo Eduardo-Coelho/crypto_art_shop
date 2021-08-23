@@ -25,7 +25,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "server": "nodemon backend/server.js",
+    "node": "nodemon node/server.js",
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

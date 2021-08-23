@@ -1,18 +1,18 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
-import "./basket-summary.scss";
+import "./cart-summary.scss";
 import { Link } from "react-router-dom";
-import { RemoveFromBasket } from "../../../state/basket-state/actions";
+import { RemoveFromBasket } from "../../state/cart-state/actions";
 import { useStore } from "react-redux";
-import { BasketState } from "../../../state/basket-state/store";
-import { GBPFormatter } from "../../helper-functions";
+import { BasketState } from "../../state/cart-state/store";
+import { GBPFormatter } from "../../utility/helper";
 
-const BasketSummary: React.FC<any> = ({ setToggle, basket }) => {
+const BasketSummary: React.FC<any> = ({ setToggle, cart }) => {
   const store = useStore();
 
-  const subItems = (basket: BasketState) => {
-    const totalItemsSum = basket.items.reduce((accumulator, currentValue) => {
+  const subItems = (cart: BasketState) => {
+    const totalItemsSum = cart.items.reduce((accumulator, currentValue) => {
       return accumulator + currentValue.price;
     }, 0);
     return GBPFormatter.format(totalItemsSum);
@@ -24,15 +24,16 @@ const BasketSummary: React.FC<any> = ({ setToggle, basket }) => {
         onMouseLeave={() => {
           setToggle(false);
         }}
-        className="basket-summary"
+        className="cart-summary"
       >
-        {basket.items.map((item: any, index: number) => {
+        {cart.items.map((item: any, index: number) => {
           return (
-            <li key={`basket-item${index}`}>
+            <li key={`cart-item${index}`}>
               <Link to={{ pathname: `/product/${item.id}` }}>
                 <b> {GBPFormatter.format(item.price)}</b>
                 {item.name.substring(0, 19)}
               </Link>
+              
 
               <span>
                 <FontAwesomeIcon
@@ -46,8 +47,8 @@ const BasketSummary: React.FC<any> = ({ setToggle, basket }) => {
             </li>
           );
         })}
-        <div className="sub-basket">
-          <h1> {subItems(basket)} </h1>
+        <div className="sub-cart">
+          <h1> {subItems(cart)} </h1>
         </div>
       </div>
     </>

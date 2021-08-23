@@ -60,8 +60,8 @@ export const RestBasketState = (store:any): void => {
 }
 
 export const GetBasktetState = (): BasketState => {
- const { basket } = useSelector((state: State) => state);
-return basket;
+ const { cart } = useSelector((state: State) => state);
+return cart;
 }
 
 export const RemoveFromBasket = (store:any, id: string) => {
