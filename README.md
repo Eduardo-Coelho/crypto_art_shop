@@ -1,5 +1,8 @@
 # Cryto Art Shop
 Ecommerce application, inspired by crypto art.
+
+**This e-commerce app is mainly used for training purposes just wanted to get better at react and Redux and node.js**
+
 ## tech
 
 ```
