@@ -1,5 +1,5 @@
 # Cryto Art Shop
-ecommerce application, inspired by crypto art.
+Ecommerce application, inspired by crypto art.
 ## tech
 
 ```
